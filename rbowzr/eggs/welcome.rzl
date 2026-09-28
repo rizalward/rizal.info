@@ -1,0 +1,9 @@
+{
+  "id": "yabowzr.welcome",
+  "name": "Welcome to ЯOS",
+  "kind": "app",
+  "version": "0.1.0",
+  "entry": "main.rzl",
+  "offline": true,
+  "stealth": true
+}

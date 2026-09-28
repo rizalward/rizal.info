@@ -1,0 +1,24 @@
+{
+  "app" : {
+    "ed25519" : "6roIlCom3X0z+HZFdvBsOpf29dUAgIbKWvL66T7gQUW2MEnrCfG24xz73WDhWlHEhJZNgNE2JnVGPkv5AOnCCw==",
+    "id" : "io.github.rizaleon.yaaim",
+    "kind" : "app",
+    "minimumSystemVersion" : "26.6.2",
+    "name" : "YBOT-0.3.3.dmg",
+    "notes" : "ЯBOT official build 2026-09-27 (arm64, offline heart)",
+    "sha256" : "95a560c34cad0d654b624b646de98467111dc157de90af291ec84466a5bcb6e6",
+    "size" : 74047667,
+    "title" : "ЯBOT",
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.3/YBOT-0.3.3.dmg",
+    "version" : "0.3.3"
+  },
+  "eggs" : [
+
+  ],
+  "feed" : "https://rizal.info/ybot/appcast.json",
+  "generated" : "2026-09-28T07:44:56Z",
+  "keyId" : "e5833fdfbbfe",
+  "product" : "ЯBOT",
+  "schema" : "rlab-appcast.v1",
+  "signedMessage" : "rlab-update-v1\\n<kind>\\n<id>\\n<version>\\n<name>\\n<size>\\n<sha256> (ed25519; url not signed)"
+}
