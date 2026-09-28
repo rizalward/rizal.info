@@ -1,22 +1,22 @@
 {
   "app" : {
-    "ed25519" : "6roIlCom3X0z+HZFdvBsOpf29dUAgIbKWvL66T7gQUW2MEnrCfG24xz73WDhWlHEhJZNgNE2JnVGPkv5AOnCCw==",
+    "ed25519" : "TEmgRIXaFeyRNgvkhwbGcO4NcK7TR+DY3Q3YU0xH5KtTn3OuWDHN6xq9oIyhAWpife9hD9Gcm/5/nLHyZtLNAg==",
     "id" : "io.github.rizaleon.yaaim",
     "kind" : "app",
     "minimumSystemVersion" : "26.6.2",
-    "name" : "YBOT-0.3.3.dmg",
+    "name" : "YBOT-0.3.4.dmg",
     "notes" : "ЯBOT official build 2026-09-27 (arm64, offline heart)",
-    "sha256" : "95a560c34cad0d654b624b646de98467111dc157de90af291ec84466a5bcb6e6",
-    "size" : 74047667,
+    "sha256" : "d6fcf9d5cae6fa1700043303da6eb77bafbd747579be98c7c38d3dd75a52ba14",
+    "size" : 74058605,
     "title" : "ЯBOT",
-    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.3/YBOT-0.3.3.dmg",
-    "version" : "0.3.3"
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.4/YBOT-0.3.4.dmg",
+    "version" : "0.3.4"
   },
   "eggs" : [
 
   ],
   "feed" : "https://rizal.info/ybot/appcast.json",
-  "generated" : "2026-09-28T07:44:56Z",
+  "generated" : "2026-09-28T21:27:44Z",
   "keyId" : "e5833fdfbbfe",
   "product" : "ЯBOT",
   "schema" : "rlab-appcast.v1",
