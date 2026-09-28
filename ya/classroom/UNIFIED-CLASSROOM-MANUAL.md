@@ -167,3 +167,6 @@ Decider HARD: every bar recognizes UNIFIED section "Я operating system commands
 - No sat wake · ~/ЯLAB only · no /Applications reseat.
 
 *Folded 2026-09-28 16:17 MDT · PROXY-GROKBOT · HANDOFF HARDCODE*
+
+## Handoff fold
+- 2026-09-28 · SHELL+download+wallet: ЯBOWZR 1.1.1 / ЯBOT 0.3.4 feeds+SUMS staged on rizal.info & rizal.pw clones; open.html shell-downloads + ya shell_seats; push blocked RIZALEON→rizalward 403 (need rizalward auth).
