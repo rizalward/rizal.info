@@ -45,6 +45,10 @@
     {
       "trait_type": "law",
       "value": "clay-source-chain-mirror"
+    },
+    {
+      "trait_type": "shell_seats",
+      "value": "YBOT-0.3.4 + RBOWZR-1.1.1 · rizal.info feeds 2026-09-28"
     }
   ],
   "properties": {
