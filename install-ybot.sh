@@ -4,21 +4,25 @@
 #   curl -fsSL https://rizal.info/install.sh | sh -s -- ybot   → ЯBOT        (or: curl -fsSL https://rizal.info/install-ybot.sh | sh)
 # What it does: finds the newest GitHub release for the app → downloads the DMG + SHA256SUMS over HTTPS only → checks the SHA-256
 # (and the ed25519 signature on SHA256SUMS when this Mac's openssl supports ed25519) → mounts read-only (-nobrowse) → copies the app with
-# ditto into /Applications (an existing copy is MOVED to ~/Applications/.old-<time>, never deleted) → clears com.apple.quarantine → unmounts.
-# Slim+heart (ЯBOT 0.3.3+): when the release also publishes YBOT-*-heart.gguf (or prefers YBOT-*-slim.dmg), downloads and verifies
-# heart, seats it at Contents/Resources/heart.gguf, then re-ad-hoc-signs so the resource seal stays valid — zero extra prompts when
-# INSTALL_YES=1. On update, a matching seated heart is reused (no re-download). Old full-DMG releases (no heart asset) unchanged.
-# Why it works without a warning: the app carries a free ad-hoc signature (Apple silicon runs only signed code), curl does not add the
-# quarantine flag, and copying into /Applications avoids App Translocation. ЯMAX ЯID-0003 for the Decider ЯID-0001 · rizal.info
-# Settings (env): INSTALL_APP=rbowzr|ybot · INSTALL_REPO=owner/repo · INSTALL_DIR (default /Applications) · INSTALL_OLD_DIR
-#   (default ~/Applications) · INSTALL_YES=1 (no questions) · INSTALL_WORK (download folder) · test only: INSTALL_API_URL /
-#   INSTALL_BASE_URL = http://127.0.0.1:<port>/… (plain http is accepted ONLY for 127.0.0.1/localhost).
+# ditto into ~/ЯLAB/APPS ONLY (created if missing) and REPLACES IT IN PLACE → clears com.apple.quarantine → unmounts.
+# ONE APP · ONE TILE: the only seat is ~/ЯLAB/APPS/<App>.app. Nothing is ever written to /Applications or ~/Applications. The previous
+# seat is parked (not deleted) as ~/ЯLAB/UPDATES/<App>/old/<App>-<version>-<time>.app.parked (not a .app → no second tile) and
+# unregistered from LaunchServices. A copy found in /Applications or ~/Applications is only REPORTED (remove it yourself to keep one tile).
+# Slim+heart (ЯBOT 0.3.3+): when the release also publishes YBOT-*-heart.gguf, downloads and verifies heart, seats it at
+# Contents/Resources/heart.gguf, then re-ad-hoc-signs so the resource seal stays valid. On update, a matching heart already seated in
+# ~/ЯLAB/APPS (or, read-only, in a legacy /Applications copy) is reused (no 2 GiB re-download).
+# Why no warning: free ad-hoc signature (Apple silicon runs only signed code) and curl does not add the quarantine flag, so there is no
+# App Translocation wherever the app lives. ЯMAX ЯID-0003 for the Decider ЯID-0001 · rizal.info · one-tile revision 2026-09-28
+# Settings (env): INSTALL_APP=rbowzr|ybot · INSTALL_REPO=owner/repo · INSTALL_YES=1 (no questions) · INSTALL_WORK (download folder) ·
+#   test only: INSTALL_LAB_ROOT (default ~/ЯLAB; the seat is always <root>/APPS) · INSTALL_API_URL / INSTALL_BASE_URL =
+#   http://127.0.0.1:<port>/… (plain http is accepted ONLY for 127.0.0.1/localhost).
 set -eu
 
 APP_KEY="${1:-${INSTALL_APP:-ybot}}"
 REPO="${INSTALL_REPO:-rizalward/rizal.info}"                 # ← set at publish time (see RELEASES/PUBLISH-STEPS.md)
-INSTALL_DIR="${INSTALL_DIR:-/Applications}"
-OLD_ROOT="${INSTALL_OLD_DIR:-$HOME/Applications}"
+LAB_ROOT="${INSTALL_LAB_ROOT:-$HOME/ЯLAB}"
+INSTALL_DIR="$LAB_ROOT/APPS"                                   # the ONLY install target (one app · one tile)
+LSREG=/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister
 PUBKEY_B64="zs7M4OOB0zQhWOQw3SHpAY+XYxbZJvcPESy1y400Ti0="   # ЯLAB release signing (ed25519) public key
 
 say() { printf '%s\n' "ЯLAB install · $*"; }
@@ -126,41 +130,56 @@ if [ -n "$SIG_URL" ] && fetch "$SIG_URL" -o "$W/SHA256SUMS.sig" 2>/dev/null; the
 fi
 say "signature · $SIGSTATE"
 
-# 3) mount read-only, copy with ditto, keep any old copy
+# 3) mount read-only, seat into ~/ЯLAB/APPS (replace in place, park the previous seat)
+[ -n "${INSTALL_DIR##/Applications*}" ] || die "refusing /Applications (one app · one tile: ~/ЯLAB/APPS only)"
 mkdir -p "$MNT"
 hdiutil attach -nobrowse -readonly -noautoopen -mountpoint "$MNT" "$W/$DMG_NAME" >/dev/null || die "could not mount $DMG_NAME"
 MOUNTED=1
 SRC=""; for a in "$MNT"/*.app; do [ -d "$a" ] && { SRC="$a"; break; }; done
 [ -n "$SRC" ] || die "no .app inside $DMG_NAME"
 APPDIR="$(basename "$SRC")"; DEST="$INSTALL_DIR/$APPDIR"
-mkdir -p "$INSTALL_DIR" 2>/dev/null || true
-SUDO=""; [ -w "$INSTALL_DIR" ] || { SUDO="sudo"; say "$INSTALL_DIR is not writable — asking for your password (sudo)"; }
+mkdir -p "$INSTALL_DIR" || die "could not create $INSTALL_DIR"
+[ -w "$INSTALL_DIR" ] || die "$INSTALL_DIR is not writable (no sudo is ever used)"
+BID="$(plutil -extract CFBundleIdentifier raw -o - "$SRC/Contents/Info.plist" 2>/dev/null || true)"
 
-# If replacing, optionally reuse a matching seated heart (avoids a 2 GiB re-download on update)
+# Other copies = other tiles: report only (this installer never touches /Applications or ~/Applications)
+LEGACY=""
+for L in "/Applications/$APPDIR" "$HOME/Applications/$APPDIR"; do
+  [ -d "$L" ] && { LEGACY="${LEGACY:+$LEGACY }$L"; say "NOTE · another copy exists at $L — remove it (Trash) to keep ONE tile; the app opens its ~/ЯLAB/APPS seat instead"; }
+done
+
+# If replacing, optionally reuse a matching heart (seat first, then a legacy copy read-only) — avoids a 2 GiB re-download
 SAVED_HEART=""
-if [ -n "$HEART_URL" ] && [ -n "$HEART_WANT" ] && [ -f "$DEST/Contents/Resources/heart.gguf" ]; then
-  HAVE="$(shasum -a 256 "$DEST/Contents/Resources/heart.gguf" | awk '{print $1}')"
-  if [ "$HAVE" = "$HEART_WANT" ]; then
-    SAVED_HEART="$W/heart-reuse.gguf"
-    ditto "$DEST/Contents/Resources/heart.gguf" "$SAVED_HEART" || SAVED_HEART=""
-    [ -n "$SAVED_HEART" ] && say "will reuse seated heart from existing app (SHA-256 match)"
-  fi
+if [ -n "$HEART_URL" ] && [ -n "$HEART_WANT" ]; then
+  for H in "$DEST/Contents/Resources/heart.gguf" "/Applications/$APPDIR/Contents/Resources/heart.gguf" "$HOME/Applications/$APPDIR/Contents/Resources/heart.gguf"; do
+    [ -f "$H" ] || continue
+    if [ "$(shasum -a 256 "$H" | awk '{print $1}')" = "$HEART_WANT" ]; then
+      SAVED_HEART="$W/heart-reuse.gguf"; ditto "$H" "$SAVED_HEART" || SAVED_HEART=""
+      [ -n "$SAVED_HEART" ] && { say "will reuse heart from $H (SHA-256 match)"; break; }
+    fi
+  done
 fi
 
+WAS_RUNNING=0
 if [ -e "$DEST" ]; then
-  TS="$(date +%Y%m%d-%H%M%S)"; OLD="$OLD_ROOT/.old-$TS"
-  ANS="b"
+  pgrep -f "$DEST/Contents/MacOS/" >/dev/null 2>&1 && WAS_RUNNING=1
+  OLDV="$(plutil -extract CFBundleShortVersionString raw -o - "$DEST/Contents/Info.plist" 2>/dev/null || echo old)"
+  TS="$(date +%Y%m%d-%H%M%S)"; PARK_DIR="$LAB_ROOT/UPDATES/$APPNAME/old"; PARK="$PARK_DIR/$APPNAME-$OLDV-$TS.app.parked"
+  ANS="r"
   if [ "${INSTALL_YES:-0}" != 1 ] && [ -r /dev/tty ] && [ -w /dev/tty ]; then
-    printf 'ЯLAB install · %s already exists. [b]ack it up to %s and replace, or [q]uit? [b] ' "$DEST" "$OLD" > /dev/tty
-    read -r ANS < /dev/tty || ANS="b"; [ -n "$ANS" ] || ANS="b"
+    printf 'ЯLAB install · replace %s (%s) IN PLACE? The old one is parked at %s. [r]eplace or [q]uit? [r] ' "$DEST" "$OLDV" "$PARK" > /dev/tty
+    read -r ANS < /dev/tty || ANS="r"; [ -n "$ANS" ] || ANS="r"
   fi
-  case "$ANS" in b|B|y|Y) ;; *) die "left $DEST untouched" ;; esac
-  mkdir -p "$OLD"; $SUDO mv "$DEST" "$OLD/" || die "could not move the old app aside"
-  say "old copy kept at $OLD/$APPDIR (nothing deleted)"
+  case "$ANS" in r|R|b|B|y|Y) ;; *) die "left $DEST untouched" ;; esac
+  [ "$WAS_RUNNING" = 1 ] && say "$APPNAME is running — it keeps running from the parked copy until you quit it; relaunch opens the new seat"
+  mkdir -p "$PARK_DIR" || die "could not create $PARK_DIR"
+  [ -x "$LSREG" ] && "$LSREG" -u "$DEST" >/dev/null 2>&1 || true
+  mv "$DEST" "$PARK" || die "could not park the old app"
+  say "old seat parked at $PARK (nothing deleted · not a .app, so no second tile)"
 fi
-say "copying $APPDIR → $INSTALL_DIR"
-$SUDO ditto "$SRC" "$DEST" || die "copy failed"
-$SUDO xattr -dr com.apple.quarantine "$DEST" 2>/dev/null || true
+say "seating $APPDIR → $INSTALL_DIR (the one seat)"
+ditto "$SRC" "$DEST" || die "copy failed"
+xattr -dr com.apple.quarantine "$DEST" 2>/dev/null || true
 hdiutil detach "$MNT" -quiet && MOUNTED=0 || true
 
 # 4) optional heart.gguf (slim split) — reuse / download, verify, seat, re-ad-hoc-sign
@@ -180,18 +199,26 @@ if [ -n "$HEART_URL" ]; then
   [ "$HEART_WANT" = "$GOT_H" ] || die "SHA-256 mismatch for heart (want $HEART_WANT, got $GOT_H) — app copied but heart NOT seated"
   say "heart SHA-256 ok · $GOT_H"
   say "seating heart → $HEART_DEST"
-  $SUDO mkdir -p "$DEST/Contents/Resources" || die "could not create Resources"
-  $SUDO ditto "$HEART_SRC" "$HEART_DEST" || die "heart seat failed"
-  $SUDO xattr -dr com.apple.quarantine "$HEART_DEST" 2>/dev/null || true
+  mkdir -p "$DEST/Contents/Resources" || die "could not create Resources"
+  ditto "$HEART_SRC" "$HEART_DEST" || die "heart seat failed"
+  xattr -dr com.apple.quarantine "$HEART_DEST" 2>/dev/null || true
   # Seating a new resource invalidates the slim DMG's seal — re-ad-hoc-sign (same flags as rlab-release.sh)
   say "re-signing after heart seat (ad-hoc, hardened runtime)…"
-  $SUDO codesign --force --deep --sign - --options runtime --timestamp=none --preserve-metadata=entitlements "$DEST" \
+  codesign --force --deep --sign - --options runtime --timestamp=none --preserve-metadata=entitlements "$DEST" \
     || die "re-sign after heart seat failed — heart seated but signature INVALID"
   HEART_STATE="seated · $GOT_H"
 fi
 
+[ -x "$LSREG" ] && "$LSREG" -f "$DEST" >/dev/null 2>&1 || true
+# HARD RULE · an update grows IN PLACE: exactly one copy of this app in the seat folder, no live .app in UPDATES
+for O in "$INSTALL_DIR"/*.app; do
+  [ -d "$O" ] && [ "$O" != "$DEST" ] || continue
+  [ "$(plutil -extract CFBundleIdentifier raw -o - "$O/Contents/Info.plist" 2>/dev/null)" = "$BID" ] && die "one app · one tile: a second copy $O exists next to $DEST — move it to the Trash, then re-run"
+done
+for O in "$LAB_ROOT/UPDATES/$APPNAME"/old/*.app; do [ -d "$O" ] && die "one app · one tile: live app copy in the parking area ($O) — it must end in .app.parked"; done
 if codesign --verify --deep --strict "$DEST" 2>/dev/null; then CS="valid (ad-hoc)"; else CS="INVALID"; fi
 if xattr -p com.apple.quarantine "$DEST" >/dev/null 2>&1; then QS="present"; else QS="none"; fi
 say "installed $APPNAME $VERTAG → $DEST · signature $CS · quarantine $QS · heart $HEART_STATE"
+[ -n "$LEGACY" ] && say "one tile · still to remove by hand: $LEGACY"
 say "open it:  open \"$DEST\"   ·   download kept in $W"
 say "one-liner:  curl -fsSL https://rizal.info/install.sh | sh$( [ "$ASSET" = YBOT ] && printf ' -s -- ybot' )"

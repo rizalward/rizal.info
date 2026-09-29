@@ -67,7 +67,7 @@
     <ul>
       <li>Finds the newest GitHub Release over HTTPS and downloads the DMG + <a href="/SHA256SUMS">SHA256SUMS</a>.</li>
       <li>Checks SHA‑256 (and ed25519 on the sums when your openssl supports it). Mismatch → abort.</li>
-      <li>Mounts read‑only, copies into <b>/Applications</b> with <code>ditto</code>, clears quarantine. Existing app is moved aside — never deleted.</li>
+      <li>Mounts read‑only, copies into <b>~/ЯLAB/APPS</b> only (created if missing) with <code>ditto</code>, clears quarantine. One app · one tile: an existing copy is replaced in place and the old one is parked in <code>~/ЯLAB/UPDATES</code> — never deleted. Nothing is written to /Applications.</li>
     </ul>
   </section>
 

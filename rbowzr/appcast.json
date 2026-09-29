@@ -1,32 +1,113 @@
 {
   "app" : {
-    "ed25519" : "0vffm+WsHSQDfcYYNbEa2SAQTfKesiFLk7lYq03Ero25nU934a4W40jT9ZYijAadJCO/kxiQsmmRKU212R8UBg==",
+    "ed25519" : "op2HngOYB/LuLwzXOk68Wdg+Wx0W/mCOUyWaONbpXfg3nB0mkdKB5Sk+yEaH066m5NqXPV59ItHG8+Zt4rjUAA==",
     "id" : "info.rizal.rbowzr.native",
     "kind" : "app",
     "minimumSystemVersion" : "14.0",
-    "name" : "RBOWZR-1.1.1.dmg",
-    "notes" : "ЯOS base shell · signed updater (/update) · .RZL eggs (/eggs)",
-    "sha256" : "e7d5904a7d924e337988995e827434787596b2a8ccfa24ee06f0fb1bcba5c1f1",
-    "size" : 8800154,
+    "name" : "RBOWZR-1.1.2.dmg",
+    "notes" : "ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
+    "sha256" : "1bc7398feb18905465ac7993ec0a59b13b099292a8b56ab1b8535cf81e3c38f4",
+    "size" : 14179070,
     "title" : "ЯBOWZR",
-    "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.1.1/RBOWZR-1.1.1.dmg",
-    "version" : "1.1.1"
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.1.2/RBOWZR-1.1.2.dmg",
+    "version" : "1.1.2"
+  },
+  "apps" : {
+    "ios" : {
+      "id" : "info.rizal.rbowzr.native",
+      "kind" : "app-notice",
+      "notes" : "ios build via TestFlight / App Store (not distributed yet) · eggs work in-app",
+      "platform" : "ios",
+      "store" : "",
+      "version" : "1.1.2"
+    },
+    "ipados" : {
+      "id" : "info.rizal.rbowzr.native",
+      "kind" : "app-notice",
+      "notes" : "ipados build via TestFlight / App Store (not distributed yet) · eggs work in-app",
+      "platform" : "ipados",
+      "store" : "",
+      "version" : "1.1.2"
+    },
+    "macos" : {
+      "ed25519" : "BLm7+XEfz+dcaFWWW0owAhCfc2XRpe0u/IzTIi/omZZw7J7sOzlIQ2cH5lFZOGL1pD5JgEylSPn2YjeyulnHCw==",
+      "id" : "info.rizal.rbowzr.native",
+      "kind" : "app",
+      "minimumSystemVersion" : "14.0",
+      "name" : "RBOWZR-1.1.2.dmg",
+      "notes" : "ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
+      "sha256" : "1bc7398feb18905465ac7993ec0a59b13b099292a8b56ab1b8535cf81e3c38f4",
+      "size" : 14179070,
+      "title" : "ЯBOWZR",
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.1.2/RBOWZR-1.1.2.dmg",
+      "version" : "1.1.2"
+    }
   },
   "eggs" : [
     {
-      "ed25519" : "04hhsJSS9E+5WOUjyYI39GzSGhHcCuZupe0xzZfgotf2XNZ3zTC9XvSNJx3QAzWIQVxlsxFoUpsZPecfSN5XDg==",
+      "ed25519" : "uCdpcw+LykdnPWeesJvn9O8sgXPAMpacTLTRYR0x83/MZfScEKFJLjUJqT12TsJPA5d3iHzsZKgzq3vj8EuBDw==",
+      "hosts" : [
+        "rbowzr"
+      ],
       "id" : "welcome",
       "kind" : "egg",
       "name" : "welcome.rzl",
+      "platforms" : [
+        "macos",
+        "ios",
+        "ipados"
+      ],
       "sha256" : "4446b2e7f69d6fe6f30396e2b6a7614ec1fd9f9695ced8c53b9d9034397c6a6f",
       "size" : 159,
       "title" : "Welcome to ЯOS",
       "url" : "eggs/welcome.rzl",
       "version" : "1.1.1"
+    },
+    {
+      "ed25519" : "RC0ifEhB9mLfGYL8lw1tKElZn31wTHEFwLeVxnxdzXYa/kLn1bJOYPe2j/z0W/wJeJX+57Om7CBXnoNPHomzBw==",
+      "hosts" : [
+        "rbowzr",
+        "ybot"
+      ],
+      "id" : "bots-panel",
+      "kind" : "egg",
+      "minHostVersion" : "1.1.2",
+      "name" : "bots-panel-1.1.1.rzl.zip",
+      "platforms" : [
+        "macos",
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "70e36d4b8f9b539d6a6cef04dfba67e04199bfc07874b13e6b9e0aa2db8c5475",
+      "size" : 153400,
+      "title" : "ЯBOWZR BOTS PANEL · stock ЯBOT + your bots · profile editor",
+      "url" : "eggs/bots-panel-1.1.1.rzl.zip",
+      "version" : "1.1.1"
+    },
+    {
+      "ed25519" : "Bm13HNnxkt3OJpXOJ37iu+NhvqS+QJIOCPVOiU56pe+mzfH12f9YwZyfb3CdugNtvXYJswClVNZgscu+KCndBQ==",
+      "hosts" : [
+        "rbowzr",
+        "ybot"
+      ],
+      "id" : "unified-bar",
+      "kind" : "egg",
+      "minHostVersion" : "1.1.2",
+      "name" : "unified-bar-1.1.1.rzl.zip",
+      "platforms" : [
+        "macos",
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "f366742eb7674d0df6d267061cb9d04d9a5aae22f2b4fef62a24b9e1793bf1b8",
+      "size" : 3006,
+      "title" : "UNIFIED SMART COMMAND SEARCH ADDRESS MANUAL BAR (public catalog)",
+      "url" : "eggs/unified-bar-1.1.1.rzl.zip",
+      "version" : "1.1.1"
     }
   ],
   "feed" : "https://rizal.info/rbowzr/appcast.json",
-  "generated" : "2026-09-28T21:27:42Z",
+  "generated" : "2026-09-29T06:49:49Z",
   "keyId" : "e5833fdfbbfe",
   "product" : "ЯBOWZR",
   "schema" : "rlab-appcast.v1",
