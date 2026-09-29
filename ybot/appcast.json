@@ -1,22 +1,94 @@
 {
   "app" : {
-    "ed25519" : "TEmgRIXaFeyRNgvkhwbGcO4NcK7TR+DY3Q3YU0xH5KtTn3OuWDHN6xq9oIyhAWpife9hD9Gcm/5/nLHyZtLNAg==",
+    "ed25519" : "UwLbDQZCYPGz+3TWcRPwwPzX/txV98T3v4ZWPhpJUbYJ+H3VTYSV7pu64ioCuM1GbBLuXQZwhfoBRmr6pX0DBA==",
     "id" : "io.github.rizaleon.yaaim",
     "kind" : "app",
     "minimumSystemVersion" : "26.6.2",
-    "name" : "YBOT-0.3.4.dmg",
-    "notes" : "ЯBOT official build 2026-09-27 (arm64, offline heart)",
-    "sha256" : "d6fcf9d5cae6fa1700043303da6eb77bafbd747579be98c7c38d3dd75a52ba14",
-    "size" : 74058605,
+    "name" : "YBOT-0.3.5.dmg",
+    "notes" : "ЯBOT · egg updater (/eggs) · bots panel · one app one tile",
+    "sha256" : "c7e9a0e7f9bb7739e2bb47bf8444d01a34607f2732f023051b4d7adc8d882bd8",
+    "size" : 64956574,
     "title" : "ЯBOT",
-    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.4/YBOT-0.3.4.dmg",
-    "version" : "0.3.4"
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.5/YBOT-0.3.5.dmg",
+    "version" : "0.3.5"
+  },
+  "apps" : {
+    "ios" : {
+      "id" : "io.github.rizaleon.yaaim",
+      "kind" : "app-notice",
+      "notes" : "ios build via TestFlight / App Store (not distributed yet) · eggs work in-app",
+      "platform" : "ios",
+      "store" : "",
+      "version" : "0.3.5"
+    },
+    "ipados" : {
+      "id" : "io.github.rizaleon.yaaim",
+      "kind" : "app-notice",
+      "notes" : "ipados build via TestFlight / App Store (not distributed yet) · eggs work in-app",
+      "platform" : "ipados",
+      "store" : "",
+      "version" : "0.3.5"
+    },
+    "macos" : {
+      "ed25519" : "bEwQpxHkanvGn8+47FlqiCb/yW0pDDOQUtXaZkZ9fYdad3+44WJGULNSp8DaSAZxCtZk3CTldwhOAA5j06jfAw==",
+      "id" : "io.github.rizaleon.yaaim",
+      "kind" : "app",
+      "minimumSystemVersion" : "26.6.2",
+      "name" : "YBOT-0.3.5.dmg",
+      "notes" : "ЯBOT · egg updater (/eggs) · bots panel · one app one tile",
+      "sha256" : "c7e9a0e7f9bb7739e2bb47bf8444d01a34607f2732f023051b4d7adc8d882bd8",
+      "size" : 64956574,
+      "title" : "ЯBOT",
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.5/YBOT-0.3.5.dmg",
+      "version" : "0.3.5"
+    }
   },
   "eggs" : [
-
+    {
+      "ed25519" : "LenDrQ5GAFP34vp2caNjBi1agSpHvzZoQxuiTGxWjU88I3OcemTayTp2/KUcmXGA6iDTgCGnq/Np0ct6kpJkBw==",
+      "hosts" : [
+        "rbowzr",
+        "ybot"
+      ],
+      "id" : "bots-panel",
+      "kind" : "egg",
+      "minHostVersion" : "0.3.5",
+      "name" : "bots-panel-1.1.1.rzl.zip",
+      "platforms" : [
+        "macos",
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "70e36d4b8f9b539d6a6cef04dfba67e04199bfc07874b13e6b9e0aa2db8c5475",
+      "size" : 153400,
+      "title" : "ЯBOWZR BOTS PANEL · stock ЯBOT + your bots · profile editor",
+      "url" : "eggs/bots-panel-1.1.1.rzl.zip",
+      "version" : "1.1.1"
+    },
+    {
+      "ed25519" : "Vpb5VCBlXzeuPOg+Oy/8WicrBIKgVvWORlKk78jd4Bq4VbVQk70LES9BpduApcZlyLhtBLSNiTtoJmOz4ivNCQ==",
+      "hosts" : [
+        "rbowzr",
+        "ybot"
+      ],
+      "id" : "unified-bar",
+      "kind" : "egg",
+      "minHostVersion" : "0.3.5",
+      "name" : "unified-bar-1.1.1.rzl.zip",
+      "platforms" : [
+        "macos",
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "f366742eb7674d0df6d267061cb9d04d9a5aae22f2b4fef62a24b9e1793bf1b8",
+      "size" : 3006,
+      "title" : "UNIFIED SMART COMMAND SEARCH ADDRESS MANUAL BAR (public catalog)",
+      "url" : "eggs/unified-bar-1.1.1.rzl.zip",
+      "version" : "1.1.1"
+    }
   ],
   "feed" : "https://rizal.info/ybot/appcast.json",
-  "generated" : "2026-09-28T21:27:44Z",
+  "generated" : "2026-09-29T06:49:50Z",
   "keyId" : "e5833fdfbbfe",
   "product" : "ЯBOT",
   "schema" : "rlab-appcast.v1",
