@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ЯLAB Status 2026-09-29</title><style>body{font:15px/1.5 -apple-system,system-ui,sans-serif;max-width:760px;margin:2em auto;padding:0 1em}code{background:#eee;padding:0 3px}</style>
+<h1>Status 2026-09-29: Apps, Components, Engines, Hearts, Builds, Update method</h1>
+<h2>Published</h2>
+<ul>
+<li><b>ЯBOWZR 1.1.2 build 6</b> (tag <code>rbowzr-v1.1.2</code>): Mac DMG 14.2 MB. Heart: <code>RBOWZR-1.1.2-heart.gguf</code>, Qwen3-1.7B, 1.11 GB, sha 228fb562….</li>
+<li><b>ЯBOT 0.3.5</b> (tag <code>ybot-v0.3.5</code>): Mac DMG 65.0 MB. Heart: <code>YBOT-0.3.5-heart.gguf</code>, Qwen2.5-3B, 2.10 GB, sha 626b4a66….</li>
+</ul>
+<h2>iPhone dev builds (unpublished)</h2>
+<ul>
+<li>ЯBOWZR <code>info.rizal.rbowzr.native</code> 1.1.2 with the ChatML fix, and ЯBOT <code>io.github.rizaleon.yaaim</code>.</li>
+<li>Both share Heart Qwen3-1.7B in App Group <code>group.info.rizal.rlab</code>, folder <code>ЯLAB/HEARTS</code>. Team 88HACKXHZL.</li>
+</ul>
+<h2>Components (14)</h2>
+<ul>
+<li>trust-core, approval, safe-zone, registry, unified-bar, bots-panel, chalkboard, dossier, snapshot, offline-router, context, heart, outside-sensor, heartbeat.</li>
+</ul>
+<h2>Engines</h2>
+<ul>
+<li>llama.cpp through the PygmyRuntime fusion on Mac; LibLlama/RHeart on iOS.</li>
+<li>Frozen trust core: RZLAssembly, RZLOwnership, ActionGate, ApprovalToken, CapabilityRegistry, Decide, Identity, OutsideSensor, SafeZoneGuard, ShellManifest.</li>
+</ul>
+<h2>Update method</h2>
+<ul>
+<li>In-place egg/tile growth: same bundle ID, never a copy or a second tile.</li>
+<li>Mac, iOS, and iPadOS in lockstep.</li>
+<li>Commands: <code>/update [auto on|off|install|restart]</code> and <code>/eggs [pull|install|update|auto|rollback|staged|installed|active|open]</code>.</li>
+<li>Hearts stay external in <code>ЯLAB/HEARTS</code>, listed in <code>catalog.json</code>.</li>
+<li>Rizal tests on his devices, then gives a final yes, then publish.</li>
+<li>iOS needs TestFlight before it can go public.</li>
+</ul>
+<h2>Known issues</h2>
+<ul>
+<li>rizal.pw https needs the www CNAME changed to rizalward.github.io.</li>
+<li>ЯBOWZR&#x27;s old 1.1 GB Heart copy is still on the phone.</li>
+<li>Fresh installs have no Heart download link.</li>
+</ul>
