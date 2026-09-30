@@ -1,0 +1,31 @@
+{
+  "schema": "rlab-android-rzl-updates.v1",
+  "product": "ЯBOWZR",
+  "channel": "Я",
+  "hostVersion": "0.1.3",
+  "generated": "2026-09-30T00:00:00Z",
+  "policy": {
+    "apkRebuildRequiredFor": ["native-host", "permissions", "intent-registration"],
+    "apkRebuildNotRequiredFor": ["shell-assets", "RZL-eggs", "tile-content", "remote-manifest"],
+    "offlineFallback": "packaged-shell"
+  },
+  "shell": {
+    "kind": "seed-shell",
+    "sameShell": true,
+    "sameComponents": true,
+    "platform": "android",
+    "feed": "https://rizal.info/rbowzr/android/updates/index.json"
+  },
+  "eggs": [
+    {
+      "id": "super-dynamic-pygmy",
+      "version": "1.0.0",
+      "name": "CHANNEL-YA-SUPER-DYNAMIC-PYGMY.rzl",
+      "sha256": "e6a0b3eeb180426f6807365dc8f5e6bd0623f797dc8c330675ad493f44fe5935",
+      "size": 2170279,
+      "url": "/rbowzr/android/releases/0.1.3/CHANNEL-YA-SUPER-DYNAMIC-PYGMY.rzl",
+      "display": "gold-dragon-egg",
+      "platforms": ["android", "ios", "ipados", "linux", "macos"]
+    }
+  ]
+}
