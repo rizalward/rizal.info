@@ -1,0 +1,16 @@
+{
+  "product": "\u042fBOWZR",
+  "platform": "linux-amd64",
+  "channel": "stable",
+  "version": "0.1.0",
+  "branch": "linuxeum-darwineus",
+  "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/linux/linuxeum-darwineus.json",
+  "note": "Local method. The GitHub file does not exist yet. RLAB treats a missing file as no update.",
+  "artifacts": [
+    {
+      "component": "shell",
+      "version": "0.1.0",
+      "sha256": null
+    }
+  ]
+}
