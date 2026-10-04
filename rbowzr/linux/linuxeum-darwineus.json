@@ -4,7 +4,7 @@
   "channel": "stable",
   "version": "0.1.0",
   "branch": "linuxeum-darwineus",
-  "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/linux/linuxeum-darwineus.json",
+  "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/linux/ubuntu-os-0.1.0-linux-amd64.tar.gz",
   "note": "Both update paths. App feeds are read from GitHub. OS packages run on the machine as RLAB-ubuntu. This file does not install.",
   "paths": {
     "app": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/appcast.json",
@@ -15,7 +15,15 @@
     {
       "component": "shell",
       "version": "0.1.0",
-      "sha256": null
+      "sha256": "a8bc3493bba52a4d9050662c8eb0a5516d4eb3f672bda26447ac3a261f13e3fe",
+      "name": "ubuntu-os-0.1.0-linux-amd64.tar.gz",
+      "description": "linux amd64 0.1.0",
+      "size": 481393,
+      "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/linux/ubuntu-os-0.1.0-linux-amd64.tar.gz"
     }
-  ]
+  ],
+  "sha256": "a8bc3493bba52a4d9050662c8eb0a5516d4eb3f672bda26447ac3a261f13e3fe",
+  "size": 481393,
+  "name": "ubuntu-os-0.1.0-linux-amd64.tar.gz",
+  "description": "linux amd64 0.1.0"
 }
