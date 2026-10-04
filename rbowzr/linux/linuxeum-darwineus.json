@@ -1,11 +1,16 @@
 {
-  "product": "\u042fBOWZR",
+  "product": "ЯBOWZR",
   "platform": "linux-amd64",
   "channel": "stable",
   "version": "0.1.0",
   "branch": "linuxeum-darwineus",
   "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/linux/linuxeum-darwineus.json",
-  "note": "Local method. The GitHub file does not exist yet. RLAB treats a missing file as no update.",
+  "note": "Both update paths. App feeds are read from GitHub. OS packages run on the machine as RLAB-ubuntu. This file does not install.",
+  "paths": {
+    "app": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/appcast.json",
+    "linux": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/linux/linuxeum-darwineus.json",
+    "os": "RLAB-ubuntu"
+  },
   "artifacts": [
     {
       "component": "shell",
