@@ -15,7 +15,7 @@
     "name": "face.tar.gz",
     "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/ubuntu-touch/releases/0.1.0-ut3/face.tar.gz",
     "size": 8825143,
-    "sha256": "2b16f1e92ea2c2d55a01dd4b45eee75448a6ad4e7c2023393b13ee654fa9f9b4",
+    "sha256": "52eb702b752b276dd956c36071fcfddf4416a723175db743fa6707c142d00dd7",
     "contents": "face/* only"
   }
 }
