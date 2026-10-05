@@ -1,0 +1,17 @@
+{
+  "name": "yabowzr-ubuntu-touch-sargo",
+  "device": "google-pixel-3a-sargo",
+  "androidBaseline": "android-9 / PQ3A.190801.002",
+  "halium": "9.0",
+  "format": "flash-bundle",
+  "nativeHostRebuild": false,
+  "faceUpdate": {
+    "version": "0.1.0-ut3",
+    "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/ubuntu-touch/releases/0.1.0-ut3-r2/face.tar.gz",
+    "sha256": "768bd1640e0ddb0de6f4839c927041a59d3e34efa1731f94d572802ae291e6ce",
+    "size": 8820444,
+    "verifiedFeed": "https://raw.githubusercontent.com/rizalward/rizal.info/945c4d3/rbowzr/ubuntu-touch/updates/index.json"
+  },
+  "requiredInputs": ["boot.img", "halium-boot.img", "system.img", "vendor.img", "ubuntu-touch-rootfs.img"],
+  "output": "yabowzr-ubuntu-touch-sargo-24.04-ut3.img.tar.zst"
+}

@@ -8,3 +8,6 @@ The Pixel updater checks `updates/index.json`, downloads the declared archive
 with Python HTTPS, verifies size and SHA-256, stages it, and atomically
 promotes `face/active/` on the next launcher start. A previous tree remains
 available for rollback.
+
+The separate [standalone image build](image/README.md) pins the verified
+`0.1.0-ut3` face payload and refuses checksum or device-input mismatches.
