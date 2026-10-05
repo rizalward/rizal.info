@@ -13,9 +13,9 @@
   "artifact": {
     "version": "0.1.0-ut3",
     "name": "face.tar.gz",
-    "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/ubuntu-touch/releases/0.1.0-ut3-r1/face.tar.gz",
-    "size": 8825143,
-    "sha256": "52eb702b752b276dd956c36071fcfddf4416a723175db743fa6707c142d00dd7",
+    "url": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/ubuntu-touch/releases/0.1.0-ut3-r2/face.tar.gz",
+    "size": 8820444,
+    "sha256": "768bd1640e0ddb0de6f4839c927041a59d3e34efa1731f94d572802ae291e6ce",
     "contents": "face/* only"
   }
 }
