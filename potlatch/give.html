@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEND IT · give</title>
+<meta name="theme-color" content="#0a0a0c">
+<style>
+  body{margin:0;background:#0a0a0c;color:#f5f5f7;font:16px/1.45 -apple-system,BlinkMacSystemFont,sans-serif;padding:24px}
+  .wrap{max-width:480px;margin:0 auto}
+  h1{font-size:28px;margin:0 0 8px}
+  .muted{color:#8e8e93;font-size:14px}
+  .card{background:#16161a;border:1px solid #2c2c2e;border-radius:14px;padding:14px;margin:12px 0}
+  code{font:12px/1.4 ui-monospace,Menlo,monospace;word-break:break-all}
+  .rail{display:none;margin:8px 0;padding:10px;border-radius:10px;background:#1c1c22}
+  .rail.show{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>SEND IT</h1>
+  <p class="muted">ЯWALLET donation page. Rails appear only when the owner has linked public addresses. Nothing is prefilled by the site.</p>
+  <div class="card">
+    <div class="muted">profile</div>
+    <code id="pid">(open from QR / rzl://wallet/give/&lt;id&gt;)</code>
+  </div>
+  <div class="card">
+    <div class="muted">Primary asset</div>
+    <div>Я TOKEN</div>
+    <code>BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv</code>
+    <div class="muted">decimals 9 · payer picks a rail below</div>
+  </div>
+  <div id="rails" class="card">
+    <div class="muted">Linked rails (client-staged preview)</div>
+    <p class="muted" id="empty">No linked rails in this browser profile yet. Owner links them in ЯWALLET → Linked accounts (public only).</p>
+  </div>
+  <p class="muted">Law: public addresses/handles only · no keys · crypto spends need wallet confirm · freeze authority on Я still held.</p>
+  <p><a href="./" style="color:#0a84ff">← Potlatch</a></p>
+</div>
+<script>
+(function(){
+  var id = (location.hash||'').replace(/^#/,'') || (location.pathname.split('/').pop());
+  if(id && id !== 'give.html' && id !== 'give') document.getElementById('pid').textContent = id;
+  // Optional local preview: if opener saved linked JSON in localStorage under potlatch.give.<id>
+  try {
+    var raw = localStorage.getItem('potlatch.give.'+id);
+    if(!raw) return;
+    var a = JSON.parse(raw);
+    var box = document.getElementById('rails');
+    document.getElementById('empty').style.display='none';
+    function add(title, val, uri){
+      if(!val) return;
+      var d=document.createElement('div'); d.className='rail show';
+      d.innerHTML='<strong>'+title+'</strong><div><code>'+val+'</code></div>'+(uri?('<div><code>'+uri+'</code></div>'):'');
+      box.appendChild(d);
+    }
+    if(a.cashAppCashtag) add('Cash App', a.cashAppCashtag);
+    var ya='BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv';
+    if(a.solanaAddress) add('Solana', a.solanaAddress, 'solana:'+a.solanaAddress+'?spl-token='+ya);
+    if(a.bitcoinOnChain) add('Bitcoin', a.bitcoinOnChain, 'bitcoin:'+a.bitcoinOnChain);
+    if(a.lightning) add('Lightning', a.lightning);
+    if(a.ethereumAddress) add('Ethereum', a.ethereumAddress, 'ethereum:'+a.ethereumAddress);
+    if(a.venmoHandle) add('Venmo', a.venmoHandle);
+    if(a.paypalMe) add('PayPal.me', a.paypalMe);
+    if(a.kofiUrl) add('Ko-fi', a.kofiUrl);
+    if(a.liberapayUrl) add('Liberapay', a.liberapayUrl);
+    if(a.githubSponsorsUrl) add('GitHub Sponsors', a.githubSponsorsUrl);
+  } catch(e){}
+})();
+</script>
+</body>
+</html>

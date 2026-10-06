@@ -1,0 +1,379 @@
+{
+  "schema": "potlatch.v1",
+  "name": "ЯLAB",
+  "storefront": "POTLATCH APP STORE / CRYPTO CASH WALLET",
+  "updated": "2026-10-05T17:44:38-06:00",
+  "pricingPolicy": {
+    "model": "donation",
+    "label": "SEND IT",
+    "note": "Apps are free. Optional donation via SEND IT only — free, low-bureaucracy rails. No server, no processor keys in-app."
+  },
+  "treasury": {
+    "payTo": null,
+    "note": "Rizal fills SEND IT rails. No addresses invented."
+  },
+  "sendIt": {
+    "title": "SEND IT",
+    "subtitle": "Optional donation. Lab apps stay free.",
+    "crypto": {
+      "solana": {
+        "address": "",
+        "usdcMint": "",
+        "solUri": "",
+        "qrPayload": ""
+      },
+      "bitcoin": {
+        "onChainAddress": "",
+        "lightning": ""
+      },
+      "ethereum": {
+        "address": ""
+      }
+    },
+    "cashApps": {
+      "cashAppCashtag": "$chaserizal",
+      "venmoHandle": "",
+      "paypalMe": ""
+    },
+    "cards": {
+      "kofiUrl": "",
+      "liberapayUrl": "",
+      "githubSponsorsUrl": ""
+    },
+    "primaryAsset": {
+      "symbol": "Я",
+      "mint": "BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv",
+      "decimals": 9
+    }
+  },
+  "hero": {
+    "id": "ya-os",
+    "title": "Я OS",
+    "label": "Я POTLATCH EXCLUSIVE",
+    "blurb": "Egg / shell platform — one lab OS face across apps and boards.",
+    "backgroundNote": "Cosmic clay art may remain as hero background; title is Я OS (not Cosmic Clay Blaster).",
+    "example": false,
+    "pricing": {
+      "model": "donation",
+      "amount": null,
+      "currency": null,
+      "payTo": null,
+      "cta": "Get",
+      "tipCta": "SEND IT"
+    }
+  },
+  "editorial": [
+    {
+      "id": "feat-potlatch-market",
+      "eyebrow": "MARKET",
+      "title": "Я OS Я POTLATCH APP MARKET",
+      "blurb": "Get the Potlatch App Market: free installs and updates for every Я app, SEND IT donations.",
+      "appId": "potlatch-market",
+      "example": false,
+      "href": "/potlatch/"
+    },
+    {
+      "id": "feat-rbowzr",
+      "eyebrow": "APPS",
+      "title": "ЯBOWZR",
+      "blurb": ".rzl browser shell · Bowser · exact ID info.rizal.rbowzr.native · one tile",
+      "appId": "rbowzr",
+      "example": false
+    },
+    {
+      "id": "feat-ybot",
+      "eyebrow": "BOTS",
+      "title": "ЯBOT",
+      "blurb": "Mind · Heart · Companion — io.github.rizaleon.yaaim · App Group group.info.rizal.rlab",
+      "appId": "ybot",
+      "example": false
+    },
+    {
+      "id": "feat-biobot",
+      "eyebrow": "TOOLS",
+      "title": "BIOBOT lab",
+      "blurb": "Pack / feed tooling — biobot-pack 0.1.0 (sha verified on site).",
+      "appId": "biobot",
+      "example": false
+    }
+  ],
+  "tileRow": [
+    "rbowzr",
+    "ybot",
+    "potlatch-market",
+    "potlatch-updater",
+    "biobot",
+    "rbowzr-android",
+    "rbowzr-linux",
+    "rbowzr-ubuntu-touch"
+  ],
+  "apps": [
+    {
+      "id": "rbowzr",
+      "name": "ЯBOWZR",
+      "bundleIdentifier": "info.rizal.rbowzr.native",
+      "platform": [
+        "ios",
+        "ipados",
+        "macos"
+      ],
+      "tab": "apps",
+      "version": "1.2.1",
+      "build": "3",
+      "downloadURL": "https://github.com/rizalward/rizal.info/releases/download/rbowzr-ios-v1.2.1/RBOWZR-1.2.1.ipa",
+      "sha256": null,
+      "size": null,
+      "status": "coming soon",
+      "statusNote": "iOS/iPadOS IPA not published yet. Mac DMG published as 1.1.2 (sha256 1bc7398feb18905465ac7993ec0a59b13b099292a8b56ab1b8535cf81e3c38f4). Phone lab build 1.2.1 (3) via USB.",
+      "macPublished": {
+        "version": "1.1.2",
+        "name": "RBOWZR-1.1.2.dmg",
+        "sha256": "1bc7398feb18905465ac7993ec0a59b13b099292a8b56ab1b8535cf81e3c38f4",
+        "size": 14179070,
+        "url": "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.1.2/RBOWZR-1.1.2.dmg"
+      },
+      "icon": "icons/rbowzr.png",
+      "notes": ".rzl browser shell · exact ID · one tile · App Group group.info.rizal.rlab",
+      "appGroup": "group.info.rizal.rlab",
+      "exactBundleID": true,
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    },
+    {
+      "id": "ybot",
+      "name": "ЯBOT",
+      "bundleIdentifier": "io.github.rizaleon.yaaim",
+      "platform": [
+        "ios",
+        "ipados",
+        "macos"
+      ],
+      "tab": "bots",
+      "version": "0.3.7",
+      "build": "2026100503",
+      "downloadURL": "https://github.com/rizalward/rizal.info/releases/download/ybot-ios-v0.3.7/YBOT-0.3.7.ipa",
+      "sha256": null,
+      "size": null,
+      "status": "coming soon",
+      "statusNote": "iOS IPA not published yet. Mac DMG published as 0.3.5 (sha256 c7e9a0e7f9bb7739e2bb47bf8444d01a34607f2732f023051b4d7adc8d882bd8). Phone lab build 0.3.7 (2026100503) via USB.",
+      "macPublished": {
+        "version": "0.3.5",
+        "name": "YBOT-0.3.5.dmg",
+        "sha256": "c7e9a0e7f9bb7739e2bb47bf8444d01a34607f2732f023051b4d7adc8d882bd8",
+        "size": null,
+        "url": "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.5/YBOT-0.3.5.dmg"
+      },
+      "icon": "icons/ybot.png",
+      "notes": "Self-update after M1 (same-ID installd).",
+      "appGroup": "group.info.rizal.rlab",
+      "exactBundleID": true,
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    },
+    {
+      "id": "rbowzr-android",
+      "name": "ЯBOWZR Android",
+      "bundleIdentifier": "local.rizal.yabowzr",
+      "platform": [
+        "android"
+      ],
+      "tab": "apps",
+      "version": "0.1.3",
+      "build": null,
+      "downloadURL": "https://rizal.info/rbowzr/android/releases/0.1.3/%D0%AFBOWZR-Android-0.1.3-debug.apk",
+      "sha256": "2875acd156fbb599406259dd03a4c2c291ee323997e209862c0c95d151e7c3ca",
+      "size": 13013790,
+      "status": "published",
+      "icon": "icons/rbowzr.png",
+      "notes": "Native Android host · debug APK · update feed /rbowzr/android/updates/",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    },
+    {
+      "id": "rbowzr-linux",
+      "name": "ЯBOWZR Linux",
+      "bundleIdentifier": null,
+      "platform": [
+        "linux"
+      ],
+      "tab": "apps",
+      "version": "0.1.0",
+      "build": null,
+      "downloadURL": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/linux/ubuntu-os-0.1.0-linux-amd64.tar.gz",
+      "sha256": "a8bc3493bba52a4d9050662c8eb0a5516d4eb3f672bda26447ac3a261f13e3fe",
+      "size": 481393,
+      "status": "published",
+      "icon": "icons/rbowzr.png",
+      "notes": "linux-amd64 shell · linuxeum-darwineus branch",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    },
+    {
+      "id": "rbowzr-ubuntu-touch",
+      "name": "ЯBOWZR Ubuntu Touch",
+      "bundleIdentifier": null,
+      "platform": [
+        "ubuntu-touch"
+      ],
+      "tab": "apps",
+      "version": "0.1.0-ut3",
+      "build": "r2",
+      "downloadURL": "https://raw.githubusercontent.com/rizalward/rizal.info/main/rbowzr/ubuntu-touch/releases/0.1.0-ut3-r2/face.tar.gz",
+      "sha256": "768bd1640e0ddb0de6f4839c927041a59d3e34efa1731f94d572802ae291e6ce",
+      "size": 8820444,
+      "status": "published",
+      "icon": "icons/rbowzr.png",
+      "notes": "face.tar.gz content pack · ubuntu-touch-arm64",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "id": "potlatch-market",
+      "name": "Я OS Я POTLATCH APP MARKET",
+      "tab": "tools",
+      "version": null,
+      "sha256": null,
+      "status": "published",
+      "notes": "Free installs and updates for every Я app · SEND IT donations · exact IDs · one tile.",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      },
+      "href": "/potlatch/"
+    },
+    {
+      "id": "potlatch-updater",
+      "name": "Potlatch UPDATER",
+      "tab": "tools",
+      "version": null,
+      "sha256": null,
+      "status": "coming soon",
+      "notes": "In-app storefront + on-device re-sign path (M1). USB/devicectl remains primary.",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    },
+    {
+      "id": "biobot",
+      "name": "BIOBOT pack",
+      "tab": "tools",
+      "version": "0.1.0",
+      "downloadURL": "https://raw.githubusercontent.com/rizalward/rizal.info/main/biobot/packs/biobot-pack-0.1.0.tar.gz",
+      "sha256": "99265be9dbeac762073c53265e1a174f4a1bf890ad1591bde9428b066398d6a1",
+      "size": 23310610,
+      "status": "published",
+      "notes": "Pack / feed under /biobot/.",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    }
+  ],
+  "arcade": [
+    {
+      "id": "ya-os-hero",
+      "name": "Я OS",
+      "tab": "arcade",
+      "example": false,
+      "label": "Я POTLATCH EXCLUSIVE",
+      "notes": "Platform hero. Clay cosmic art is background only.",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    }
+  ],
+  "hub": {
+    "name": "POTLATCH APP STORE / CRYPTO CASH WALLET",
+    "short": "Я POTLATCH",
+    "sections": [
+      "apps",
+      "bots",
+      "tools",
+      "arcade",
+      "yawallet"
+    ],
+    "deepLinks": [
+      "rzl://potlatch",
+      "rzl://wallet",
+      "yabot://potlatch",
+      "yabot://wallet"
+    ],
+    "note": "One hub. .rzl files stay ЯBOWZR. Keys in Keychain. Explicit confirm. No auto-sends. No invented addresses."
+  },
+  "yaToken": {
+    "symbol": "Я",
+    "name": "Я TOKEN",
+    "mint": "BB9uA5BuacDnWyDf5Npc9nMb9yFbyThsNrQPBYJ5Q1Lv",
+    "decimals": 9,
+    "chain": "solana-mainnet",
+    "primaryRail": true,
+    "tokenblast": {
+      "asOf": "2026-10-05T17:42:00-06:00",
+      "supply": "1000000",
+      "freezeAuthorityHeld": true,
+      "pool": false,
+      "holdersJupiter": 3,
+      "verdict": "peculiar-but-alive"
+    },
+    "note": "Primary rail for SEND IT / payment intents / NFT·trade denomination. No minting from Potlatch."
+  },
+  "paymentForms": [
+    "donation",
+    "trade",
+    "barter",
+    "crypto",
+    "card",
+    "cash",
+    "nft"
+  ]
+}
