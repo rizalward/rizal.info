@@ -59,7 +59,7 @@
       <code class="line" id="c2">curl -fsSL https://rizal.info/install-ybot.sh | sh</code>
       <button type="button" class="copy" data-for="c2">COPY</button>
     </div>
-    <p style="margin:10px 0 0">Same installer family. Slim DMG + separate <code>heart.gguf</code> (seated automatically). Alternate: <code id="c2alt">curl -fsSL https://rizal.info/install.sh | sh -s -- ybot</code></p>
+    <p style="margin:10px 0 0">Same installer family. One DMG with the heart fused inside — no separate heart download. Alternate: <code id="c2alt">curl -fsSL https://rizal.info/install.sh | sh -s -- ybot</code></p>
   </section>
 
   <section class="sec" aria-label="What happens">
@@ -75,9 +75,9 @@
     <h2>Advanced · DMG only</h2>
     <p>Prefer a manual disk image after publish (not required for most users):</p>
     <ul>
-      <li>ЯBOWZR 1.1.2 — GitHub Release tag <code>rbowzr-v1.1.2</code> · asset <code>RBOWZR-1.1.2.dmg</code></li>
-      <li>ЯBOT 0.3.5 — tag <code>ybot-v0.3.5</code> · assets <code>YBOT-0.3.5.dmg</code> (slim) + <code>YBOT-0.3.5-heart.gguf</code></li>
-      <li>Repo (planned): <code>rizalward/rizal.info</code> · verify against <a href="/SHA256SUMS">/SHA256SUMS</a> + <a href="/SHA256SUMS.sig">.sig</a></li>
+      <li>ЯBOWZR 1.2.2 (build 9) — GitHub Release tag <code>rbowzr-v1.2.2</code> · asset <a href="https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.2/RBOWZR-1.2.2.dmg"><code>RBOWZR-1.2.2.dmg</code></a></li>
+      <li>ЯBOT 0.3.8 (build 2026100507) — tag <code>ybot-v0.3.8</code> · asset <a href="https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.8/YBOT-0.3.8.dmg"><code>YBOT-0.3.8.dmg</code></a> (heart fused in)</li>
+      <li>Repo: <code>rizalward/rizal.info</code> · verify against <a href="/SHA256SUMS">/SHA256SUMS</a> + <a href="/SHA256SUMS.sig">.sig</a></li>
     </ul>
   </section>
 
@@ -91,7 +91,7 @@
   </section>
 
 </main>
-<footer>Staged under ЯLAB · publish needs Decider Approve · HTTPS on rizal.info still pending</footer>
+<footer>Published from ЯLAB · HTTPS live and enforced on rizal.info + rizal.pw (valid certificates)</footer>
 <script>
 (function () {
   var host = (location.hostname || '').toLowerCase();

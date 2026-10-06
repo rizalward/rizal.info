@@ -98,6 +98,7 @@ footer.site a{color:#777}
 .sheet .none{color:var(--warn);font:13px/1.4 var(--sans)}
 .sheet .close{margin-top:12px;width:100%}
 
+@media (max-width:520px){.dl-txt{display:none}.search{width:100px}}
 @media (min-width:860px){
   body{padding-bottom:0}
   .layout{display:grid;grid-template-columns:220px 1fr;max-width:1200px;margin:0 auto}
@@ -142,10 +143,13 @@ footer.site a{color:#777}
   <header class="top">
     <h1 class="wordmark">Я&nbsp;POTLATCH</h1>
     <div class="top-right">
+      <a class="pill ghost" href="/download/" style="padding:8px 12px;font-size:12px" aria-label="Download ЯBOWZR and ЯBOT">⤓<span class="dl-txt"> Download</span></a>
       <input class="search" type="search" placeholder="Search" aria-label="Search" id="q">
       <button type="button" class="menu-btn" aria-label="Menu">⋮</button>
     </div>
   </header>
+
+  <div id="rlab-notices"></div>
 
   <div id="home-promo"></div>
 
@@ -161,10 +165,11 @@ footer.site a{color:#777}
       <li><b>In-app Potlatch</b> — <code>POTLATCH</code> / <code>UPDATER INSTALL ЯBOWZR</code> (exact ID · one tile). Loopback M1 pending.</li>
       <li><b>USB</b> — <code>xcrun devicectl device install app --device &lt;UDID&gt; &lt;app&gt;</code> with fresh free-team profile.</li>
       <li><b>Mac</b> — site install line when DMG published.</li>
+      <li><b>Download</b> — <a href="/download/">/download/</a> · ЯBOWZR + ЯBOT for Mac + iOS · version, build, size, sha256 from the signed feeds.</li>
     </ol>
     <p style="margin:10px 0 0">Pricing: free Get · optional <b>SEND IT</b> donation. Crypto can open ЯWALLET (Keychain keys · explicit confirm · no auto-send). Rails hidden until Rizal fills them.</p>
   </div>
-  <footer class="site">Staged · uncommitted · <a href="potlatch.json">potlatch.json</a> · <a href="FORMAT.md">FORMAT</a><br><span id="hostMark"></span></footer>
+  <footer class="site">Staged · uncommitted · <a href="potlatch.json">potlatch.json</a> · <a href="FORMAT.md">FORMAT</a> · <a href="/download/">download</a><br><span id="hostMark"></span></footer>
 </div>
 </div>
 
@@ -177,6 +182,7 @@ footer.site a{color:#777}
     <button type="button" data-tab="yawallet"><span>💳</span>ЯWALLET</button>
   </div>
 </nav>
+<script src="/download/notices.js"></script>
 
 <div class="sheet-backdrop" id="sendItSheet" role="dialog" aria-modal="true" aria-label="SEND IT">
   <div class="sheet">
@@ -190,6 +196,7 @@ footer.site a{color:#777}
 
 <script>
 (function(){
+  if(window.RLabNotices) RLabNotices.mount(document.getElementById('rlab-notices'));
   var host=(location.hostname||'').toLowerCase();
   if(!host||host==='127.0.0.1'||host==='localhost') host='local preview';
   document.getElementById('hostMark').textContent=host;

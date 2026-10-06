@@ -1,46 +1,46 @@
 {
   "app" : {
-    "ed25519" : "UwLbDQZCYPGz+3TWcRPwwPzX/txV98T3v4ZWPhpJUbYJ+H3VTYSV7pu64ioCuM1GbBLuXQZwhfoBRmr6pX0DBA==",
+    "ed25519" : "RvJ2BaZVe8rW+TtzeEExNIaIBRqvfITOdpQ+v+Bve4qjvnjltaC31vyllJMZ+G7Ldk+jQpdhMzGzS9jFrk+eAw==",
     "id" : "io.github.rizaleon.yaaim",
     "kind" : "app",
     "minimumSystemVersion" : "26.6.2",
-    "name" : "YBOT-0.3.5.dmg",
-    "notes" : "ЯBOT · egg updater (/eggs) · bots panel · one app one tile",
-    "sha256" : "c7e9a0e7f9bb7739e2bb47bf8444d01a34607f2732f023051b4d7adc8d882bd8",
-    "size" : 64956574,
+    "name" : "YBOT-0.3.8.dmg",
+    "notes" : "ЯBOT 0.3.8 (2026100507) · fresh wallet · relay client · heart fused in · egg updater (/eggs) · bots panel · one app one tile",
+    "sha256" : "e25ab9935bb0e59e62329c4ee50fc4b5fc226049e2e81ff7bfb018262c0a58ec",
+    "size" : 678423676,
     "title" : "ЯBOT",
-    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.5/YBOT-0.3.5.dmg",
-    "version" : "0.3.5"
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.8/YBOT-0.3.8.dmg",
+    "version" : "0.3.8"
   },
   "apps" : {
     "ios" : {
       "id" : "io.github.rizaleon.yaaim",
       "kind" : "app-notice",
-      "notes" : "ios build via TestFlight / App Store (not distributed yet) · eggs work in-app",
+      "notes" : "ios 0.3.8 (2026100507): no public IPA yet (free Apple profile) · lab install via USB / Wi-Fi devicectl · eggs work in-app",
       "platform" : "ios",
       "store" : "",
-      "version" : "0.3.5"
+      "version" : "0.3.8"
     },
     "ipados" : {
       "id" : "io.github.rizaleon.yaaim",
       "kind" : "app-notice",
-      "notes" : "ipados build via TestFlight / App Store (not distributed yet) · eggs work in-app",
+      "notes" : "ipados 0.3.8 (2026100507): no public IPA yet (free Apple profile) · lab install via USB / Wi-Fi devicectl · eggs work in-app",
       "platform" : "ipados",
       "store" : "",
-      "version" : "0.3.5"
+      "version" : "0.3.8"
     },
     "macos" : {
-      "ed25519" : "bEwQpxHkanvGn8+47FlqiCb/yW0pDDOQUtXaZkZ9fYdad3+44WJGULNSp8DaSAZxCtZk3CTldwhOAA5j06jfAw==",
+      "ed25519" : "RvJ2BaZVe8rW+TtzeEExNIaIBRqvfITOdpQ+v+Bve4qjvnjltaC31vyllJMZ+G7Ldk+jQpdhMzGzS9jFrk+eAw==",
       "id" : "io.github.rizaleon.yaaim",
       "kind" : "app",
       "minimumSystemVersion" : "26.6.2",
-      "name" : "YBOT-0.3.5.dmg",
-      "notes" : "ЯBOT · egg updater (/eggs) · bots panel · one app one tile",
-      "sha256" : "c7e9a0e7f9bb7739e2bb47bf8444d01a34607f2732f023051b4d7adc8d882bd8",
-      "size" : 64956574,
+      "name" : "YBOT-0.3.8.dmg",
+      "notes" : "ЯBOT 0.3.8 (2026100507) · fresh wallet · relay client · heart fused in · egg updater (/eggs) · bots panel · one app one tile",
+      "sha256" : "e25ab9935bb0e59e62329c4ee50fc4b5fc226049e2e81ff7bfb018262c0a58ec",
+      "size" : 678423676,
       "title" : "ЯBOT",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.5/YBOT-0.3.5.dmg",
-      "version" : "0.3.5"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.8/YBOT-0.3.8.dmg",
+      "version" : "0.3.8"
     }
   },
   "eggs" : [
@@ -88,7 +88,7 @@
     }
   ],
   "feed" : "https://rizal.info/ybot/appcast.json",
-  "generated" : "2026-09-29T06:49:50Z",
+  "generated" : "2026-10-06T05:45:00Z",
   "keyId" : "e5833fdfbbfe",
   "product" : "ЯBOT",
   "schema" : "rlab-appcast.v1",
