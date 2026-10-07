@@ -1,0 +1,96 @@
+{
+  "schema": "rlab.skills-connectors.v1",
+  "name": "Skills and Connectors",
+  "storefront": "Я POTLATCH · Skills and Connectors",
+  "updated": "2026-10-06T22:36:44-06:00",
+  "note": "Bridge + conversation lanes for Super Grok, ЯBOT, ЯBOWZR. iOS paused. No tokens in packages.",
+  "skills": [
+    {
+      "id": "grok-bridge",
+      "name": "grok.bridge",
+      "kind": "skill+adapter",
+      "version": "0.1.0",
+      "status": "published",
+      "downloadURL": "https://rizal.info/skills/grok-bridge.zip",
+      "downloadURLs": {
+        "zip": "https://rizal.info/skills/grok-bridge.zip",
+        "skill": "https://rizal.info/skills/grok-bridge.skill"
+      },
+      "sha256": "b384c12bfb2d151044e8575ab3e208652d1fbed3c0640a7de91591b7b1011d98",
+      "size": 4869,
+      "ios": "paused",
+      "notes": "Official Super Grok connector skill. Verbs: ping · handoff · recall · stealth · status. Plate 80. Token stays on Neo."
+    },
+    {
+      "id": "supergrok-bridge",
+      "name": "SUPERGROK-BRIDGE",
+      "kind": "skill",
+      "status": "published",
+      "notes": "Workshop skill for Super Grok talking to ЯBOT / ЯBOWZR via the bridge (app_say, transcripts, botbridge). Companion to grok.bridge.",
+      "pairsWith": "grok-bridge"
+    }
+  ],
+  "connectors": [
+    {
+      "id": "grok.bridge",
+      "name": "Grok Bridge",
+      "kind": "bridge",
+      "status": "Live",
+      "skill": "grok-bridge",
+      "endpointNote": "Public Cloudflare URL on Neo; auth required. URL changes if tunnel restarts.",
+      "conversation": {
+        "tools": [
+          "app_say",
+          "app_status",
+          "transcript_read",
+          "botbridge_status",
+          "botbridge_join",
+          "bridge_ping",
+          "bridge_handoff",
+          "bridge_recall",
+          "bridge_stealth",
+          "bridge_status"
+        ],
+        "lanes": {
+          "RBOT": "yabot",
+          "RBWR": "yabowzr"
+        },
+        "plate": 80
+      },
+      "connected": [
+        "supergrok",
+        "yabot",
+        "yabowzr"
+      ],
+      "ios": "paused"
+    },
+    {
+      "id": "supergrok",
+      "name": "Super Grok",
+      "kind": "skill+connector",
+      "status": "connected",
+      "via": "grok.bridge",
+      "notes": "Workshop lane caller. Uses app_say / bot lanes through the Live bridge."
+    },
+    {
+      "id": "yabot",
+      "name": "ЯBOT",
+      "kind": "app",
+      "status": "connected",
+      "via": "grok.bridge",
+      "mouth": "yabot",
+      "lane": "RBOT",
+      "notes": "Conversation via app_say on the RBOT workshop lane."
+    },
+    {
+      "id": "yabowzr",
+      "name": "ЯBOWZR",
+      "kind": "app",
+      "status": "connected",
+      "via": "grok.bridge",
+      "mouth": "yabowzr",
+      "lane": "RBWR",
+      "notes": "Conversation via app_say on the RBWR shell lane. Handoff target for plate 80."
+    }
+  ]
+}
