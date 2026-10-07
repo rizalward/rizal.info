@@ -26,8 +26,8 @@
       "version" : "0.1.3"
     },
     "ios" : {
-      "build" : "11",
-      "ed25519" : "hNmu80SdvI1BlL0613y0ZEty19jbqygH9PR7hL457uc+H5YxFe3pEdKXiFOz4ga1wFhSDk9dp2bIR/LcHineCg==",
+      "build" : "13",
+      "ed25519" : "vF6us0dYJQPSeIhh41BPPiio25qJ0r7uIEpHlupMGFR7jxyOyITUeC3MO4/msQTXeDiJXfVrq2u/TxXl9vunBw==",
       "heart" : {
         "bytes" : 639446688,
         "id" : "qwen3-0.6b-q8",
@@ -36,19 +36,19 @@
       },
       "id" : "info.rizal.rbowzr.native",
       "kind" : "app",
-      "name" : "RBOWZR-1.2.4-ios.ipa",
-      "notes" : "ios 1.2.4 (11) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "name" : "RBOWZR-1.2.5-ios.ipa",
+      "notes" : "ios 1.2.5 (13) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · heart resolved from app bundle on iOS (never 'no Heart'; shows 'Heart: fused 0.6B (bundled) · warming' if engine still starting) · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
       "platform" : "ios",
       "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
-      "sha256" : "1d891ffaf13a4bfc5052caa801b401c837ae7d5e8cc7a46ab55945ed557a6154",
-      "size" : 636802676,
+      "sha256" : "2cbc09fc27183bd509c09d4319b1caefbf9c32817b80ef2511eb221967ac366f",
+      "size" : 636804043,
       "store" : "",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.4/RBOWZR-1.2.4-ios.ipa",
-      "version" : "1.2.4"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.5/RBOWZR-1.2.5-ios.ipa",
+      "version" : "1.2.5"
     },
     "ipados" : {
-      "build" : "11",
-      "ed25519" : "hNmu80SdvI1BlL0613y0ZEty19jbqygH9PR7hL457uc+H5YxFe3pEdKXiFOz4ga1wFhSDk9dp2bIR/LcHineCg==",
+      "build" : "13",
+      "ed25519" : "vF6us0dYJQPSeIhh41BPPiio25qJ0r7uIEpHlupMGFR7jxyOyITUeC3MO4/msQTXeDiJXfVrq2u/TxXl9vunBw==",
       "heart" : {
         "bytes" : 639446688,
         "id" : "qwen3-0.6b-q8",
@@ -57,15 +57,15 @@
       },
       "id" : "info.rizal.rbowzr.native",
       "kind" : "app",
-      "name" : "RBOWZR-1.2.4-ios.ipa",
-      "notes" : "ipados 1.2.4 (11) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "name" : "RBOWZR-1.2.5-ios.ipa",
+      "notes" : "ipados 1.2.5 (13) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · heart resolved from app bundle on iOS (never 'no Heart'; shows 'Heart: fused 0.6B (bundled) · warming' if engine still starting) · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
       "platform" : "ipados",
       "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
-      "sha256" : "1d891ffaf13a4bfc5052caa801b401c837ae7d5e8cc7a46ab55945ed557a6154",
-      "size" : 636802676,
+      "sha256" : "2cbc09fc27183bd509c09d4319b1caefbf9c32817b80ef2511eb221967ac366f",
+      "size" : 636804043,
       "store" : "",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.4/RBOWZR-1.2.4-ios.ipa",
-      "version" : "1.2.4"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.5/RBOWZR-1.2.5-ios.ipa",
+      "version" : "1.2.5"
     },
     "macos" : {
       "ed25519" : "RCOCeoeGbAbJD7ByMsDKiyiczugAkWTvzQyIRsfow1j09YAwns4yT3p947MvLey4QO8JlRSE44EtRNAhrKMhDA==",
