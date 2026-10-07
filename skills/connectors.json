@@ -3,7 +3,7 @@
   "name": "Skills and Connectors",
   "storefront": "Я POTLATCH · Skills and Connectors",
   "updated": "2026-10-07T00:30:00-0600",
-  "note": "Live endpoint: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net (bearer auth). Permanent catalog rizal.info/botlatch/bridge. trycloudflare deprecated (backup); RDNS bridge.rizal.info:8443 backup pending router forward. iOS paused. No tokens in packages.",
+  "note": "Live endpoint: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net (bearer auth). Permanent catalog rizal.info/botlatch/bridge. trycloudflare deprecated (backup); RDNS bridge.rizal.info:8443 backup blocked upstream (router forward saved, ISP box double NAT blocks inbound). iOS paused. No tokens in packages.",
   "skills": [
     {
       "id": "grok-bridge",
@@ -37,7 +37,7 @@
       "kind": "bridge",
       "status": "Live",
       "skill": "grok-bridge",
-      "endpointNote": "Live: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net -> Neo 127.0.0.1:4872, Bearer auth (401 without). Catalog https://rizal.info/botlatch/bridge/. Backups: RDNS bridge.rizal.info:8443 (pending router forward), trycloudflare (deprecated).",
+      "endpointNote": "Live: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net -> Neo 127.0.0.1:4872, Bearer auth (401 without). Catalog https://rizal.info/botlatch/bridge/. Backups: RDNS bridge.rizal.info:8443 (router forward saved, blocked upstream by ISP box double NAT), trycloudflare (deprecated).",
       "conversation": {
         "tools": [
           "app_say",
@@ -73,7 +73,7 @@
         {
           "url": "https://bridge.rizal.info:8443",
           "kind": "rtailscale + RDNS (bridge.rizal.info A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
-          "status": "backup — pending router port-forward 8443"
+          "status": "backup — blocked upstream: router forward 8443 saved, ISP box (double NAT) blocks inbound"
         },
         {
           "url": "https://grad-journal-paper-mls.trycloudflare.com",

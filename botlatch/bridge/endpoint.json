@@ -45,7 +45,7 @@
     {
       "url": "https://bridge.rizal.info:8443",
       "kind": "rtailscale + RDNS (bridge.rizal.info A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
-      "status": "backup — pending router port-forward 8443"
+      "status": "backup — blocked upstream: router forward 8443 saved, ISP box (double NAT) blocks inbound"
     },
     {
       "url": "https://grad-journal-paper-mls.trycloudflare.com",
@@ -59,7 +59,7 @@
     "namedTunnel": "aborted",
     "reverseProxyOnPages": "impossible (static only)",
     "livePublicHttps": "Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net",
-    "rdnsBackup": "bridge.rizal.info:8443 via rtailscale + RDNS — pending router port-forward"
+    "rdnsBackup": "bridge.rizal.info:8443 via rtailscale + RDNS — router forward saved, blocked upstream by ISP box (double NAT)"
   },
   "seats": {
     "RBOT": {
