@@ -14,8 +14,8 @@
   },
   "apps" : {
     "ios" : {
-      "build" : "2026100621",
-      "ed25519" : "dVFjeXXbRPv47fxDINcB7/W+rZChhCrxzXf6LCbVVYmtP7SiQW3N+az83+mQ+pskqCBoSikArqJmBOEwCGwLCg==",
+      "build" : "2026100701",
+      "ed25519" : "+kCsSoSzbCzFFELDOl2PGGmNu6rDCfpC2K1JFR8lj9teV2DiVZI7+5CZPsYfOKeQuUOk+zs2O3N3amlUs2UMDA==",
       "heart" : {
         "bytes" : 639446688,
         "id" : "qwen3-0.6b-q8",
@@ -24,19 +24,19 @@
       },
       "id" : "io.github.rizaleon.yaaim",
       "kind" : "app",
-      "name" : "YBOT-0.3.10-ios.ipa",
-      "notes" : "ios 0.3.10 (2026100621) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "name" : "YBOT-0.3.11-ios.ipa",
+      "notes" : "ios 0.3.11 (2026100701) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
       "platform" : "ios",
       "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
-      "sha256" : "48df6c6065958a4ed2ed366ed3d82ad64fc6316844a5e98367ab5815e4bfd342",
-      "size" : 674084281,
+      "sha256" : "0c9282d4848254908de2efc9382e8b9d459b28ea28eedd2cf36ebdbd0f573790",
+      "size" : 674086668,
       "store" : "",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.10/YBOT-0.3.10-ios.ipa",
-      "version" : "0.3.10"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.11/YBOT-0.3.11-ios.ipa",
+      "version" : "0.3.11"
     },
     "ipados" : {
-      "build" : "2026100621",
-      "ed25519" : "dVFjeXXbRPv47fxDINcB7/W+rZChhCrxzXf6LCbVVYmtP7SiQW3N+az83+mQ+pskqCBoSikArqJmBOEwCGwLCg==",
+      "build" : "2026100701",
+      "ed25519" : "+kCsSoSzbCzFFELDOl2PGGmNu6rDCfpC2K1JFR8lj9teV2DiVZI7+5CZPsYfOKeQuUOk+zs2O3N3amlUs2UMDA==",
       "heart" : {
         "bytes" : 639446688,
         "id" : "qwen3-0.6b-q8",
@@ -45,15 +45,15 @@
       },
       "id" : "io.github.rizaleon.yaaim",
       "kind" : "app",
-      "name" : "YBOT-0.3.10-ios.ipa",
-      "notes" : "ipados 0.3.10 (2026100621) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "name" : "YBOT-0.3.11-ios.ipa",
+      "notes" : "ipados 0.3.11 (2026100701) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
       "platform" : "ipados",
       "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
-      "sha256" : "48df6c6065958a4ed2ed366ed3d82ad64fc6316844a5e98367ab5815e4bfd342",
-      "size" : 674084281,
+      "sha256" : "0c9282d4848254908de2efc9382e8b9d459b28ea28eedd2cf36ebdbd0f573790",
+      "size" : 674086668,
       "store" : "",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.10/YBOT-0.3.10-ios.ipa",
-      "version" : "0.3.10"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.11/YBOT-0.3.11-ios.ipa",
+      "version" : "0.3.11"
     },
     "macos" : {
       "ed25519" : "RvJ2BaZVe8rW+TtzeEExNIaIBRqvfITOdpQ+v+Bve4qjvnjltaC31vyllJMZ+G7Ldk+jQpdhMzGzS9jFrk+eAw==",
