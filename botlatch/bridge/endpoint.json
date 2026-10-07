@@ -1,0 +1,53 @@
+{
+  "schema": "rlab.botlatch-bridge.endpoint.v1",
+  "id": "botlatch.bridge",
+  "name": "BOTLATCH · Grok Bridge",
+  "updated": "2026-10-06T22:44:50-0600",
+  "permanent": "https://rizal.info/botlatch/bridge/",
+  "permanentMirrors": [
+    "https://rizal.info/botlatch/bridge/",
+    "https://rizal.info/botlatch/bridge/endpoint.json",
+    "https://rizal.pw/botlatch/bridge/",
+    "https://rizal.info/skills/connectors.json",
+    "https://rizal.info/potlatch/"
+  ],
+  "kind": "catalog",
+  "status": "Live",
+  "skill": "grok.bridge",
+  "auth": "Bearer token from Neo Keychain (rlab.supergrok-bridge.token). Refuse if missing. Never paste the token.",
+  "live": {
+    "bind": "127.0.0.1:4872",
+    "host": "rizals-MacBook-Neo",
+    "paths": {
+      "health": "GET /health (no auth)",
+      "ping": "POST /v1/grok-bridge/ping",
+      "handoff": "POST /v1/grok-bridge/handoff",
+      "recall": "POST /v1/grok-bridge/recall",
+      "stealth": "POST /v1/grok-bridge/stealth",
+      "status": "POST /v1/grok-bridge/status"
+    },
+    "note": "GitHub Pages is static HTTPS only — it cannot proxy to Neo loopback. Live calls stay on Neo. Dial from this chat only via a Decider-approved public hop."
+  },
+  "temporaryPublic": {
+    "url": "https://grad-journal-paper-mls.trycloudflare.com",
+    "label": "temporary",
+    "note": "trycloudflare quick tunnel. Changes if the tunnel restarts. Not permanent. Keep until a durable public host exists."
+  },
+  "hosting": {
+    "durablePublicHttps": "GitHub Pages (rizal.info / rizal.pw)",
+    "cloudflareAccount": "none (Decider has no Cloudflare account)",
+    "namedTunnel": "aborted",
+    "reverseProxyOnPages": "impossible (static only)"
+  },
+  "seats": {
+    "RBOT": {"app": "ЯBOT", "mouth": "yabot"},
+    "RBWR": {"app": "ЯBOWZR", "mouth": "yabowzr"}
+  },
+  "plate": 80,
+  "ios": "paused",
+  "proof": {
+    "unauth": "401 unauthorized",
+    "health": "200",
+    "keychainPing": "200 ok on POST /v1/grok-bridge/ping (token never printed)"
+  }
+}

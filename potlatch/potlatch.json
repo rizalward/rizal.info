@@ -2,7 +2,7 @@
   "schema": "potlatch.v1",
   "name": "ЯLAB",
   "storefront": "POTLATCH APP STORE / CRYPTO CASH WALLET",
-  "updated": "2026-10-06T22:36:44-06:00",
+  "updated": "2026-10-06T22:44:51-0600",
   "pricingPolicy": {
     "model": "donation",
     "label": "SEND IT",
@@ -341,10 +341,10 @@
         "skill": "https://rizal.info/skills/grok-bridge.skill",
         "catalog": "https://rizal.info/skills/connectors.json"
       },
-      "sha256": "b384c12bfb2d151044e8575ab3e208652d1fbed3c0640a7de91591b7b1011d98",
-      "size": 4869,
+      "sha256": "e226cc3e720f376d6b0dae64f673f642e4f4cbb50b30502aefa894b4fc4d5eea",
+      "size": 5960,
       "status": "published",
-      "statusNote": "iOS paused. Mac skill+adapter. Bridge Live on Neo. Token stays on Neo — not in package.",
+      "statusNote": "iOS paused. Mac skill+adapter. Permanent catalog /botlatch/bridge. Live on Neo :4872. Token stays on Neo — not in package.",
       "notes": "Official Super Grok connector skill for RBOT (ЯBOT) + RBWR (ЯBOWZR). Verbs: ping · handoff · recall · stealth · status. Plate 80.",
       "hosts": [
         "ybot",
@@ -477,10 +477,10 @@
         "zip": "https://rizal.info/skills/grok-bridge.zip",
         "skill": "https://rizal.info/skills/grok-bridge.skill"
       },
-      "sha256": "b384c12bfb2d151044e8575ab3e208652d1fbed3c0640a7de91591b7b1011d98",
-      "size": 4869,
+      "sha256": "e226cc3e720f376d6b0dae64f673f642e4f4cbb50b30502aefa894b4fc4d5eea",
+      "size": 5960,
       "ios": "paused",
-      "notes": "Official Super Grok connector skill. Verbs: ping · handoff · recall · stealth · status. Plate 80. Token stays on Neo."
+      "notes": "Official Super Grok connector skill. Verbs: ping · handoff · recall · stealth · status. Plate 80. Token stays on Neo. Permanent catalog: https://rizal.info/botlatch/bridge/"
     },
     {
       "id": "supergrok-bridge",
@@ -498,7 +498,7 @@
       "kind": "bridge",
       "status": "Live",
       "skill": "grok-bridge",
-      "endpointNote": "Public Cloudflare URL on Neo; auth required. URL changes if tunnel restarts.",
+      "endpointNote": "Permanent catalog https://rizal.info/botlatch/bridge/. Live: Neo 127.0.0.1:4872 + Bearer. trycloudflare hop temporary. Pages cannot proxy.",
       "conversation": {
         "tools": [
           "app_say",
@@ -523,7 +523,10 @@
         "yabot",
         "yabowzr"
       ],
-      "ios": "paused"
+      "ios": "paused",
+      "endpoint": "https://rizal.info/botlatch/bridge/",
+      "liveLocal": "http://127.0.0.1:4872",
+      "temporaryPublic": "https://grad-journal-paper-mls.trycloudflare.com"
     },
     {
       "id": "supergrok",

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BOTLATCH · Grok Bridge</title>
+<link rel="icon" href="/favicon.svg"/>
+<style>
+  :root { color-scheme: dark; --bg:#0b0d10; --card:#141820; --ink:#e8eef6; --mute:#8b97a8; --acc:#6ee7b7; --warn:#fbbf24; --line:#243041; }
+  body { margin:0; font:16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; background:var(--bg); color:var(--ink); }
+  main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+  h1 { font-size:1.6rem; margin:0 0 .35rem; }
+  .sub { color:var(--mute); margin:0 0 1.5rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.1rem 1.2rem; margin:0 0 1rem; }
+  .k { color:var(--mute); font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; }
+  .v { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; word-break:break-all; }
+  a { color:var(--acc); }
+  .tag { display:inline-block; padding:.15rem .55rem; border-radius:999px; font-size:.75rem; border:1px solid var(--line); margin-right:.35rem; }
+  .live { color:var(--acc); border-color:rgba(110,231,183,.35); }
+  .temp { color:var(--warn); border-color:rgba(251,191,36,.35); }
+  ul { margin:.4rem 0 0 1.1rem; padding:0; color:var(--mute); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.9em; }
+</style>
+</head>
+<body>
+<main>
+  <p><span class="tag live">permanent catalog</span><span class="tag">BOTLATCH</span><span class="tag">grok.bridge</span></p>
+  <h1>Grok Bridge</h1>
+  <p class="sub">Stable market address on Decider-owned GitHub Pages. Live HTTP stays on Neo loopback with bearer auth.</p>
+
+  <div class="card">
+    <div class="k">Permanent address</div>
+    <div class="v"><a href="https://rizal.info/botlatch/bridge/">https://rizal.info/botlatch/bridge/</a></div>
+    <ul>
+      <li>Machine-readable: <a href="./endpoint.json">endpoint.json</a></li>
+      <li>Catalog: <a href="/skills/connectors.json">/skills/connectors.json</a> · Market: <a href="/potlatch/">/potlatch/</a></li>
+      <li>Mirror: <a href="https://rizal.pw/botlatch/bridge/">rizal.pw/botlatch/bridge/</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="k">Live call path (Neo)</div>
+    <div class="v">http://127.0.0.1:4872</div>
+    <ul>
+      <li><code>GET /health</code> — no auth</li>
+      <li><code>POST /v1/grok-bridge/{ping|handoff|recall|stealth|status}</code> — Bearer required</li>
+      <li>Token: Neo Keychain <code>rlab.supergrok-bridge.token</code> — never paste into chat</li>
+      <li>GitHub Pages cannot proxy to Neo. No Cloudflare account → no named tunnel / Worker reverse proxy.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="k">Temporary public hop</div>
+    <p><span class="tag temp">temporary</span> trycloudflare quick tunnel — changes on restart. Labeled temporary until a durable public host exists.</p>
+    <div class="v" id="temp">see endpoint.json → temporaryPublic.url</div>
+  </div>
+
+  <div class="card">
+    <div class="k">Proof</div>
+    <ul>
+      <li>Unauth → <code>401 unauthorized</code></li>
+      <li>Keychain-token <code>POST /v1/grok-bridge/ping</code> → <code>200 ok</code></li>
+      <li>iOS paused · plate 80 · seats RBOT=yabot · RBWR=yabowzr</li>
+    </ul>
+  </div>
+</main>
+<script>
+fetch('./endpoint.json').then(r=>r.json()).then(d=>{
+  const el=document.getElementById('temp');
+  if (d.temporaryPublic && d.temporaryPublic.url) {
+    el.textContent = d.temporaryPublic.url + '  (' + (d.temporaryPublic.label||'temporary') + ')';
+  }
+}).catch(()=>{});
+</script>
+</body>
+</html>
