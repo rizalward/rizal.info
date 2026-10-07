@@ -13,22 +13,6 @@
     "version" : "1.2.2"
   },
   "apps" : {
-    "ios" : {
-      "id" : "info.rizal.rbowzr.native",
-      "kind" : "app-notice",
-      "notes" : "ios 1.2.2 (9): no public IPA yet (free Apple profile) · lab install via USB / Wi-Fi devicectl · eggs work in-app",
-      "platform" : "ios",
-      "store" : "",
-      "version" : "1.2.2"
-    },
-    "ipados" : {
-      "id" : "info.rizal.rbowzr.native",
-      "kind" : "app-notice",
-      "notes" : "ipados 1.2.2 (9): no public IPA yet (free Apple profile) · lab install via USB / Wi-Fi devicectl · eggs work in-app",
-      "platform" : "ipados",
-      "store" : "",
-      "version" : "1.2.2"
-    },
     "android" : {
       "id" : "local.rizal.yabowzr",
       "kind" : "app",
@@ -37,9 +21,51 @@
       "platform" : "android",
       "sha256" : "2875acd156fbb599406259dd03a4c2c291ee323997e209862c0c95d151e7c3ca",
       "size" : 13013790,
+      "updateFeed" : "https://rizal.info/rbowzr/android/updates/index.json",
       "url" : "https://rizal.info/rbowzr/android/releases/0.1.3/%D0%AFBOWZR-Android-0.1.3-debug.apk",
-      "version" : "0.1.3",
-      "updateFeed" : "https://rizal.info/rbowzr/android/updates/index.json"
+      "version" : "0.1.3"
+    },
+    "ios" : {
+      "build" : "10",
+      "ed25519" : "gDOj3BCpnE9F3rLJ3Lszr4CPnb9h18I6/8fsZSyowCLGN10+e7uhlT+vshlH1JjST89x+LU+Qj3A+uu5ZXsiBg==",
+      "heart" : {
+        "bytes" : 639446688,
+        "id" : "qwen3-0.6b-q8",
+        "path" : "FusedPygmy.rzl/heart/heart.gguf",
+        "sha256" : "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031"
+      },
+      "id" : "info.rizal.rbowzr.native",
+      "kind" : "app",
+      "name" : "RBOWZR-1.2.3-ios.ipa",
+      "notes" : "ios 1.2.3 (10) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "platform" : "ios",
+      "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
+      "sha256" : "5824815f91b5e3f89adf3a5abe3c9e6b2e250e6f03e7bbfab0e0a369c44d6544",
+      "size" : 636799477,
+      "store" : "",
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.3/RBOWZR-1.2.3-ios.ipa",
+      "version" : "1.2.3"
+    },
+    "ipados" : {
+      "build" : "10",
+      "ed25519" : "gDOj3BCpnE9F3rLJ3Lszr4CPnb9h18I6/8fsZSyowCLGN10+e7uhlT+vshlH1JjST89x+LU+Qj3A+uu5ZXsiBg==",
+      "heart" : {
+        "bytes" : 639446688,
+        "id" : "qwen3-0.6b-q8",
+        "path" : "FusedPygmy.rzl/heart/heart.gguf",
+        "sha256" : "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031"
+      },
+      "id" : "info.rizal.rbowzr.native",
+      "kind" : "app",
+      "name" : "RBOWZR-1.2.3-ios.ipa",
+      "notes" : "ipados 1.2.3 (10) · development-signed IPA (registered devices) · REQ-20 heart fused + build-guarded · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "platform" : "ipados",
+      "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
+      "sha256" : "5824815f91b5e3f89adf3a5abe3c9e6b2e250e6f03e7bbfab0e0a369c44d6544",
+      "size" : 636799477,
+      "store" : "",
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.3/RBOWZR-1.2.3-ios.ipa",
+      "version" : "1.2.3"
     },
     "macos" : {
       "ed25519" : "Pn9h6fp/vDhY/PHPwhtTOrjLNkoTSbnbY4MFCNFoDtrx7QLG+DP3lvo6YKsZlH7RQ1m/g6P4lUsYnhD4uTPmDA==",
