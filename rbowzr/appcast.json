@@ -1,16 +1,16 @@
 {
   "app" : {
-    "ed25519" : "Pn9h6fp/vDhY/PHPwhtTOrjLNkoTSbnbY4MFCNFoDtrx7QLG+DP3lvo6YKsZlH7RQ1m/g6P4lUsYnhD4uTPmDA==",
+    "ed25519" : "RCOCeoeGbAbJD7ByMsDKiyiczugAkWTvzQyIRsfow1j09YAwns4yT3p947MvLey4QO8JlRSE44EtRNAhrKMhDA==",
     "id" : "info.rizal.rbowzr.native",
     "kind" : "app",
     "minimumSystemVersion" : "14.0",
-    "name" : "RBOWZR-1.2.2.dmg",
-    "notes" : "ЯBOWZR 1.2.2 (9) · fresh wallet · relay client · heart fused in · ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
-    "sha256" : "f8263bb9981d5f286189819fe743e55106714dd73af0aaf272e5c83a2f5effe4",
-    "size" : 626877777,
+    "name" : "RBOWZR-1.2.3.dmg",
+    "notes" : "ЯBOWZR 1.2.3 (10) · fresh wallet · relay client · heart fused in · ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
+    "sha256" : "6409fef26601adc5fc79d46cfb079b1e43af095b9d38d74f2126fc7282a28422",
+    "size" : 626954077,
     "title" : "ЯBOWZR",
-    "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.2/RBOWZR-1.2.2.dmg",
-    "version" : "1.2.2"
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.3/RBOWZR-1.2.3.dmg",
+    "version" : "1.2.3"
   },
   "apps" : {
     "android" : {
@@ -68,17 +68,17 @@
       "version" : "1.2.4"
     },
     "macos" : {
-      "ed25519" : "Pn9h6fp/vDhY/PHPwhtTOrjLNkoTSbnbY4MFCNFoDtrx7QLG+DP3lvo6YKsZlH7RQ1m/g6P4lUsYnhD4uTPmDA==",
+      "ed25519" : "RCOCeoeGbAbJD7ByMsDKiyiczugAkWTvzQyIRsfow1j09YAwns4yT3p947MvLey4QO8JlRSE44EtRNAhrKMhDA==",
       "id" : "info.rizal.rbowzr.native",
       "kind" : "app",
       "minimumSystemVersion" : "14.0",
-      "name" : "RBOWZR-1.2.2.dmg",
-      "notes" : "ЯBOWZR 1.2.2 (9) · fresh wallet · relay client · heart fused in · ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
-      "sha256" : "f8263bb9981d5f286189819fe743e55106714dd73af0aaf272e5c83a2f5effe4",
-      "size" : 626877777,
+      "name" : "RBOWZR-1.2.3.dmg",
+      "notes" : "ЯBOWZR 1.2.3 (10) · fresh wallet · relay client · heart fused in · ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
+      "sha256" : "6409fef26601adc5fc79d46cfb079b1e43af095b9d38d74f2126fc7282a28422",
+      "size" : 626954077,
       "title" : "ЯBOWZR",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.2/RBOWZR-1.2.2.dmg",
-      "version" : "1.2.2"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.3/RBOWZR-1.2.3.dmg",
+      "version" : "1.2.3"
     }
   },
   "eggs" : [
@@ -145,7 +145,7 @@
     }
   ],
   "feed" : "https://rizal.info/rbowzr/appcast.json",
-  "generated" : "2026-10-06T05:45:00Z",
+  "generated" : "2026-10-07T07:33:22Z",
   "keyId" : "e5833fdfbbfe",
   "product" : "ЯBOWZR",
   "schema" : "rlab-appcast.v1",

@@ -1,16 +1,16 @@
 {
   "app" : {
-    "ed25519" : "RvJ2BaZVe8rW+TtzeEExNIaIBRqvfITOdpQ+v+Bve4qjvnjltaC31vyllJMZ+G7Ldk+jQpdhMzGzS9jFrk+eAw==",
+    "ed25519" : "fCxoqBWMtaTP+j3unyYxeUBq6XtPGeXJrM+jhn6C4wmK57EQNclmGBsJD/vLcyFoii07lpINy9PW3IEzRarcDw==",
     "id" : "io.github.rizaleon.yaaim",
     "kind" : "app",
     "minimumSystemVersion" : "26.6.2",
-    "name" : "YBOT-0.3.8.dmg",
-    "notes" : "ЯBOT 0.3.8 (2026100507) · fresh wallet · relay client · heart fused in · egg updater (/eggs) · bots panel · one app one tile",
-    "sha256" : "e25ab9935bb0e59e62329c4ee50fc4b5fc226049e2e81ff7bfb018262c0a58ec",
-    "size" : 678423676,
+    "name" : "YBOT-0.3.10.dmg",
+    "notes" : "ЯBOT 0.3.10 (2026100621) · fresh wallet · relay client · heart fused in · egg updater (/eggs) · bots panel · one app one tile",
+    "sha256" : "17242a864452164d9175a4e2710bdd109d038e585f78a8d1e69f2e74717a81e8",
+    "size" : 678483237,
     "title" : "ЯBOT",
-    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.8/YBOT-0.3.8.dmg",
-    "version" : "0.3.8"
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.10/YBOT-0.3.10.dmg",
+    "version" : "0.3.10"
   },
   "apps" : {
     "ios" : {
@@ -56,17 +56,17 @@
       "version" : "0.3.11"
     },
     "macos" : {
-      "ed25519" : "RvJ2BaZVe8rW+TtzeEExNIaIBRqvfITOdpQ+v+Bve4qjvnjltaC31vyllJMZ+G7Ldk+jQpdhMzGzS9jFrk+eAw==",
+      "ed25519" : "fCxoqBWMtaTP+j3unyYxeUBq6XtPGeXJrM+jhn6C4wmK57EQNclmGBsJD/vLcyFoii07lpINy9PW3IEzRarcDw==",
       "id" : "io.github.rizaleon.yaaim",
       "kind" : "app",
       "minimumSystemVersion" : "26.6.2",
-      "name" : "YBOT-0.3.8.dmg",
-      "notes" : "ЯBOT 0.3.8 (2026100507) · fresh wallet · relay client · heart fused in · egg updater (/eggs) · bots panel · one app one tile",
-      "sha256" : "e25ab9935bb0e59e62329c4ee50fc4b5fc226049e2e81ff7bfb018262c0a58ec",
-      "size" : 678423676,
+      "name" : "YBOT-0.3.10.dmg",
+      "notes" : "ЯBOT 0.3.10 (2026100621) · fresh wallet · relay client · heart fused in · egg updater (/eggs) · bots panel · one app one tile",
+      "sha256" : "17242a864452164d9175a4e2710bdd109d038e585f78a8d1e69f2e74717a81e8",
+      "size" : 678483237,
       "title" : "ЯBOT",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.8/YBOT-0.3.8.dmg",
-      "version" : "0.3.8"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/ybot-v0.3.10/YBOT-0.3.10.dmg",
+      "version" : "0.3.10"
     }
   },
   "eggs" : [
@@ -114,7 +114,7 @@
     }
   ],
   "feed" : "https://rizal.info/ybot/appcast.json",
-  "generated" : "2026-10-06T05:45:00Z",
+  "generated" : "2026-10-07T07:33:23Z",
   "keyId" : "e5833fdfbbfe",
   "product" : "ЯBOT",
   "schema" : "rlab-appcast.v1",
