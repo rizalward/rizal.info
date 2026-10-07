@@ -2,7 +2,7 @@
   "schema": "potlatch.v1",
   "name": "ЯLAB",
   "storefront": "POTLATCH APP STORE / CRYPTO CASH WALLET",
-  "updated": "2026-10-05T17:44:38-06:00",
+  "updated": "2026-10-06T22:33:10-06:00",
   "pricingPolicy": {
     "model": "donation",
     "label": "SEND IT",
@@ -95,11 +95,21 @@
       "blurb": "Pack / feed tooling — biobot-pack 0.1.0 (sha verified on site).",
       "appId": "biobot",
       "example": false
+    },
+    {
+      "id": "feat-grok-bridge",
+      "eyebrow": "SKILL",
+      "title": "grok.bridge",
+      "blurb": "Skill+adapter · RBOT↔RBWR · ping/handoff/recall · iOS paused · no token in package.",
+      "appId": "grok-bridge",
+      "example": false,
+      "href": "/skills/grok-bridge.zip"
     }
   ],
   "tileRow": [
     "rbowzr",
     "ybot",
+    "grok-bridge",
     "potlatch-market",
     "potlatch-updater",
     "biobot",
@@ -304,6 +314,41 @@
       "size": 23310610,
       "status": "published",
       "notes": "Pack / feed under /biobot/.",
+      "pricing": {
+        "model": "donation",
+        "amount": null,
+        "currency": null,
+        "payTo": null,
+        "cta": "Get",
+        "tipCta": "SEND IT"
+      }
+    },
+    {
+      "id": "grok-bridge",
+      "name": "grok.bridge",
+      "skill": "grok.bridge",
+      "kind": "skill+adapter",
+      "tab": "tools",
+      "version": "0.1.0",
+      "platform": [
+        "macos"
+      ],
+      "downloadURL": "https://rizal.info/skills/grok-bridge.zip",
+      "downloadURLs": {
+        "zip": "https://rizal.info/skills/grok-bridge.zip",
+        "skill": "https://rizal.info/skills/grok-bridge.skill",
+        "rawZip": "https://raw.githubusercontent.com/rizalward/rizal.info/main/skills/grok-bridge.zip",
+        "rawSkill": "https://raw.githubusercontent.com/rizalward/rizal.info/main/skills/grok-bridge.skill"
+      },
+      "sha256": "b384c12bfb2d151044e8575ab3e208652d1fbed3c0640a7de91591b7b1011d98",
+      "size": 4869,
+      "status": "published",
+      "statusNote": "iOS paused. Mac skill+adapter only. Token stays on Neo — not in this package. Temporary bridge URL may change if the tunnel restarts.",
+      "notes": "Official Super Grok connector skill for RBOT (ЯBOT) + RBWR (ЯBOWZR). Verbs: ping · handoff · recall · stealth · status. Plate 80. Skill+adapter package — no token bundled.",
+      "hosts": [
+        "ybot",
+        "rbowzr"
+      ],
       "pricing": {
         "model": "donation",
         "amount": null,

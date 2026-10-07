@@ -43,6 +43,7 @@ header.top{display:flex;align-items:center;justify-content:space-between;gap:12p
 .hero p{margin:6px 0 0;font:13px/1.3 var(--sans);color:#cfc4e8;max-width:18em}
 .pill{appearance:none;border:0;cursor:pointer;font:700 14px/1 var(--sans);padding:10px 20px;border-radius:999px;white-space:nowrap}
 .pill.get{background:transparent;color:#e8d5ff;box-shadow:0 0 0 2px var(--purple),0 0 18px rgba(191,90,242,.55)}
+a.pill.get{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-sizing:border-box}
 .pill.blue{background:var(--blue);color:#fff}
 .pill.send{background:transparent;color:var(--purple);box-shadow:0 0 0 1.5px var(--purple);padding:10px 14px;margin-left:6px}
 .pill.ghost{background:rgba(255,255,255,.1);color:var(--fg)}
@@ -210,8 +211,13 @@ footer.site a{color:#777}
     var cls=st==='published'?'published':'';
     return '<span class="status '+cls+'">'+esc(st)+'</span>';
   }
-  function ctaHtml(){
-    return '<button type="button" class="pill get">Get</button><button type="button" class="pill send" data-sendit>SEND IT</button>';
+  function ctaHtml(item){
+    item=item||{};
+    var url=item.downloadURL||(item.downloadURLs&&(item.downloadURLs.zip||item.downloadURLs.skill))||item.href||'';
+    var get=url
+      ? ('<a class="pill get" href="'+esc(url)+'" rel="noopener">Get</a>')
+      : '<button type="button" class="pill get">Get</button>';
+    return get+'<button type="button" class="pill send" data-sendit>SEND IT</button>';
   }
   function iconFor(id,icon){
     if(icon) return icon;
@@ -230,14 +236,15 @@ footer.site a{color:#777}
       (app.notes?'<p class="notes">'+esc(app.notes)+'</p>':'')+
       (app.statusNote?'<p class="notes">'+esc(app.statusNote)+'</p>':'')+
       '<div class="hash">sha256: '+esc(sha)+'</div></div>'+
-      '<div class="actions">'+ctaHtml()+'</div></article>';
+      '<div class="actions">'+ctaHtml(app)+'</div></article>';
   }
   function toolCard(t){
     return '<article class="card"><div class="icon" style="width:56px;height:56px;border-radius:14px;background:linear-gradient(145deg,#333,#111);display:grid;place-items:center;font-size:20px;flex-shrink:0">⚙</div>'+
       '<div class="meta"><h3>'+esc(t.name)+'</h3>'+(t.notes?'<p class="notes">'+esc(t.notes)+'</p>':'')+
-      '<div class="ver">'+(t.version?('v'+esc(t.version)+' · '):'')+statusTag(t)+'</div>'+
+      (t.statusNote?'<p class="notes">'+esc(t.statusNote)+'</p>':'')+
+      '<div class="ver">'+(t.version?('v'+esc(t.version)+' · '):'')+(t.kind?esc(t.kind)+' · ':'')+statusTag(t)+'</div>'+
       (t.sha256?'<div class="hash">sha256: '+esc(t.sha256)+'</div>':'')+'</div>'+
-      '<div class="actions">'+ctaHtml()+'</div></article>';
+      '<div class="actions">'+ctaHtml(t)+'</div></article>';
   }
   function heroBlock(h){
     h=h||{title:'Я OS',label:'Я POTLATCH EXCLUSIVE',blurb:'Egg / shell platform'};
@@ -264,9 +271,13 @@ footer.site a{color:#777}
     ids.forEach(function(id){
       var a=by[id]; if(!a) return;
       var img=iconFor(id,a.icon);
+      var durl=a.downloadURL||(a.downloadURLs&&(a.downloadURLs.zip||a.downloadURLs.skill))||a.href||'';
+      var getBtn=durl
+        ? ('<a class="pill get" style="padding:6px 12px;font-size:12px" href="'+esc(durl)+'" rel="noopener">Get</a>')
+        : '<button type="button" class="pill get" style="padding:6px 12px;font-size:12px">Get</button>';
       html+='<article class="tile"><img src="'+esc(img)+'" alt=""><h4>'+esc(a.name)+'</h4>'+
         '<div class="sub">'+esc(a.notes||a.blurb||'')+'</div>'+
-        '<div class="row">'+statusTag(a)+'<button type="button" class="pill get" style="padding:6px 12px;font-size:12px">Get</button></div></article>';
+        '<div class="row">'+statusTag(a)+getBtn+'</div></article>';
     });
     return html+'</div>';
   }
