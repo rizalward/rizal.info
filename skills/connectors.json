@@ -2,8 +2,8 @@
   "schema": "rlab.skills-connectors.v1",
   "name": "Skills and Connectors",
   "storefront": "Я POTLATCH · Skills and Connectors",
-  "updated": "2026-10-06T22:44:50-0600",
-  "note": "Permanent BOTLATCH catalog on rizal.info/botlatch/bridge. Live Neo loopback + bearer. Temporary quick tunnel labeled separately. iOS paused. No tokens in packages.",
+  "updated": "2026-10-07T00:30:00-0600",
+  "note": "Live endpoint: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net (bearer auth). Permanent catalog rizal.info/botlatch/bridge. trycloudflare deprecated (backup); RDNS bridge.rizal.info:8443 backup pending router forward. iOS paused. No tokens in packages.",
   "skills": [
     {
       "id": "grok-bridge",
@@ -16,8 +16,8 @@
         "zip": "https://rizal.info/skills/grok-bridge.zip",
         "skill": "https://rizal.info/skills/grok-bridge.skill"
       },
-      "sha256": "e226cc3e720f376d6b0dae64f673f642e4f4cbb50b30502aefa894b4fc4d5eea",
-      "size": 5960,
+      "sha256": "529cb24aa87420af34385d610651465d037c911a33a7e601c82b906be5316c1e",
+      "size": 6342,
       "ios": "paused",
       "notes": "Official Super Grok connector skill. Verbs: ping · handoff · recall · stealth · status. Plate 80. Token stays on Neo. Permanent catalog: https://rizal.info/botlatch/bridge/"
     },
@@ -37,7 +37,7 @@
       "kind": "bridge",
       "status": "Live",
       "skill": "grok-bridge",
-      "endpointNote": "Permanent catalog https://rizal.info/botlatch/bridge/. Live calls: Neo 127.0.0.1:4872 with Bearer auth. trycloudflare hop is temporary until a durable public host exists. GitHub Pages cannot proxy.",
+      "endpointNote": "Live: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net -> Neo 127.0.0.1:4872, Bearer auth (401 without). Catalog https://rizal.info/botlatch/bridge/. Backups: RDNS bridge.rizal.info:8443 (pending router forward), trycloudflare (deprecated).",
       "conversation": {
         "tools": [
           "app_say",
@@ -63,10 +63,24 @@
         "yabowzr"
       ],
       "ios": "paused",
-      "endpoint": "https://rizal.info/botlatch/bridge/",
+      "endpoint": "https://rizals-macbook-neo.taile78ba8.ts.net",
+      "endpointPaths": "https://rizals-macbook-neo.taile78ba8.ts.net/v1/grok-bridge/{ping|handoff|recall|stealth|status}",
+      "catalog": "https://rizal.info/botlatch/bridge/",
       "liveLocal": "http://127.0.0.1:4872",
-      "temporaryPublic": "https://grad-journal-paper-mls.trycloudflare.com",
-      "temporaryPublicNote": "trycloudflare quick tunnel — temporary; changes on restart."
+      "deprecatedPublic": "https://grad-journal-paper-mls.trycloudflare.com",
+      "deprecatedPublicNote": "trycloudflare quick tunnel — deprecated, backup only; changes on restart.",
+      "backups": [
+        {
+          "url": "https://bridge.rizal.info:8443",
+          "kind": "rtailscale + RDNS (bridge.rizal.info A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
+          "status": "backup — pending router port-forward 8443"
+        },
+        {
+          "url": "https://grad-journal-paper-mls.trycloudflare.com",
+          "kind": "trycloudflare quick tunnel",
+          "status": "deprecated — backup only; URL changes if the tunnel restarts"
+        }
+      ]
     },
     {
       "id": "supergrok",

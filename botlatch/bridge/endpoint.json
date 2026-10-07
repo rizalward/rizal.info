@@ -2,7 +2,7 @@
   "schema": "rlab.botlatch-bridge.endpoint.v1",
   "id": "botlatch.bridge",
   "name": "BOTLATCH · Grok Bridge",
-  "updated": "2026-10-06T22:44:50-0600",
+  "updated": "2026-10-07T00:30:00-0600",
   "permanent": "https://rizal.info/botlatch/bridge/",
   "permanentMirrors": [
     "https://rizal.info/botlatch/bridge/",
@@ -12,6 +12,13 @@
     "https://rizal.info/potlatch/"
   ],
   "kind": "catalog",
+  "liveEndpoint": {
+    "url": "https://rizals-macbook-neo.taile78ba8.ts.net",
+    "paths": "https://rizals-macbook-neo.taile78ba8.ts.net/v1/grok-bridge/{ping|handoff|recall|stealth|status}",
+    "via": "Tailscale Funnel (persistent, set with --bg; survives reboot) -> Neo 127.0.0.1:4872",
+    "auth": "Bearer required; 401 without token",
+    "label": "permanent live"
+  },
   "status": "Live",
   "skill": "grok.bridge",
   "auth": "Bearer token from Neo Keychain (rlab.supergrok-bridge.token). Refuse if missing. Never paste the token.",
@@ -26,28 +33,53 @@
       "stealth": "POST /v1/grok-bridge/stealth",
       "status": "POST /v1/grok-bridge/status"
     },
-    "note": "GitHub Pages is static HTTPS only — it cannot proxy to Neo loopback. Live calls stay on Neo. Dial from this chat only via a Decider-approved public hop."
+    "note": "Public live calls go to the Tailscale Funnel URL (liveEndpoint.url). GitHub Pages (this catalog) is static and cannot proxy.",
+    "publicUrl": "https://rizals-macbook-neo.taile78ba8.ts.net"
   },
-  "temporaryPublic": {
+  "deprecatedPublic": {
     "url": "https://grad-journal-paper-mls.trycloudflare.com",
-    "label": "temporary",
-    "note": "trycloudflare quick tunnel. Changes if the tunnel restarts. Not permanent. Keep until a durable public host exists."
+    "label": "deprecated",
+    "note": "trycloudflare quick tunnel. Deprecated, kept as backup only; changes if the tunnel restarts."
   },
+  "backups": [
+    {
+      "url": "https://bridge.rizal.info:8443",
+      "kind": "rtailscale + RDNS (bridge.rizal.info A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
+      "status": "backup — pending router port-forward 8443"
+    },
+    {
+      "url": "https://grad-journal-paper-mls.trycloudflare.com",
+      "kind": "trycloudflare quick tunnel",
+      "status": "deprecated — backup only; URL changes if the tunnel restarts"
+    }
+  ],
   "hosting": {
     "durablePublicHttps": "GitHub Pages (rizal.info / rizal.pw)",
     "cloudflareAccount": "none (Decider has no Cloudflare account)",
     "namedTunnel": "aborted",
-    "reverseProxyOnPages": "impossible (static only)"
+    "reverseProxyOnPages": "impossible (static only)",
+    "livePublicHttps": "Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net",
+    "rdnsBackup": "bridge.rizal.info:8443 via rtailscale + RDNS — pending router port-forward"
   },
   "seats": {
-    "RBOT": {"app": "ЯBOT", "mouth": "yabot"},
-    "RBWR": {"app": "ЯBOWZR", "mouth": "yabowzr"}
+    "RBOT": {
+      "app": "ЯBOT",
+      "mouth": "yabot"
+    },
+    "RBWR": {
+      "app": "ЯBOWZR",
+      "mouth": "yabowzr"
+    }
   },
   "plate": 80,
   "ios": "paused",
   "proof": {
-    "unauth": "401 unauthorized",
-    "health": "200",
-    "keychainPing": "200 ok on POST /v1/grok-bridge/ping (token never printed)"
+    "date": "2026-10-07",
+    "via": "https://rizals-macbook-neo.taile78ba8.ts.net",
+    "unauth": "POST /ping without token -> 401 unauthorized",
+    "ping": "200 pong, relay ok, mode Live",
+    "handoff": "200 plate 80 RBOT->RBWR; RBWR heart=real",
+    "recall": "200 plate 80 RBWR->RBOT; RBOT heart=real",
+    "token": "Neo Keychain, never printed"
   }
 }

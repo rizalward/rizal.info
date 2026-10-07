@@ -26,7 +26,7 @@
 <main>
   <p><span class="tag live">permanent catalog</span><span class="tag">BOTLATCH</span><span class="tag">grok.bridge</span></p>
   <h1>Grok Bridge</h1>
-  <p class="sub">Stable market address on Decider-owned GitHub Pages. Live HTTP stays on Neo loopback with bearer auth.</p>
+  <p class="sub">Permanent catalog on Decider-owned GitHub Pages. Live endpoint: Tailscale Funnel on Neo, bearer auth.</p>
 
   <div class="card">
     <div class="k">Permanent address</div>
@@ -39,36 +39,37 @@
   </div>
 
   <div class="card">
-    <div class="k">Live call path (Neo)</div>
-    <div class="v">http://127.0.0.1:4872</div>
+    <div class="k">Live endpoint <span class="tag live">permanent</span></div>
+    <div class="v"><a href="https://rizals-macbook-neo.taile78ba8.ts.net">https://rizals-macbook-neo.taile78ba8.ts.net</a></div>
     <ul>
-      <li><code>GET /health</code> — no auth</li>
-      <li><code>POST /v1/grok-bridge/{ping|handoff|recall|stealth|status}</code> — Bearer required</li>
-      <li>Token: Neo Keychain <code>rlab.supergrok-bridge.token</code> — never paste into chat</li>
-      <li>GitHub Pages cannot proxy to Neo. No Cloudflare account → no named tunnel / Worker reverse proxy.</li>
+      <li>Tailscale Funnel (persistent, <code>--bg</code>) &rarr; Neo <code>127.0.0.1:4872</code></li>
+      <li><code>POST /v1/grok-bridge/{ping|handoff|recall|stealth|status}</code> &mdash; Bearer required (401 without)</li>
+      <li>Token: Neo Keychain <code>rlab.supergrok-bridge.token</code> &mdash; never paste into chat</li>
     </ul>
   </div>
 
   <div class="card">
-    <div class="k">Temporary public hop</div>
-    <p><span class="tag temp">temporary</span> trycloudflare quick tunnel — changes on restart. Labeled temporary until a durable public host exists.</p>
-    <div class="v" id="temp">see endpoint.json → temporaryPublic.url</div>
+    <div class="k">Backups</div>
+    <ul>
+      <li><span class="tag temp">backup &middot; pending</span> <code>https://bridge.rizal.info:8443</code> &mdash; rtailscale + RDNS, waits on router port-forward</li>
+      <li><span class="tag temp">deprecated</span> <code id="temp">trycloudflare quick tunnel</code> &mdash; changes on restart, backup only</li>
+    </ul>
   </div>
 
   <div class="card">
-    <div class="k">Proof</div>
+    <div class="k">Proof &middot; 2026-10-07 via Funnel</div>
     <ul>
-      <li>Unauth → <code>401 unauthorized</code></li>
-      <li>Keychain-token <code>POST /v1/grok-bridge/ping</code> → <code>200 ok</code></li>
-      <li>iOS paused · plate 80 · seats RBOT=yabot · RBWR=yabowzr</li>
+      <li>No token &rarr; <code>401 unauthorized</code></li>
+      <li><code>ping</code> &rarr; 200 Live &middot; <code>handoff</code> plate 80 RBOT&rarr;RBWR 200 heart=real &middot; <code>recall</code> RBWR&rarr;RBOT 200 heart=real</li>
+      <li>iOS paused &middot; plate 80 &middot; seats RBOT=yabot &middot; RBWR=yabowzr</li>
     </ul>
   </div>
 </main>
 <script>
 fetch('./endpoint.json').then(r=>r.json()).then(d=>{
   const el=document.getElementById('temp');
-  if (d.temporaryPublic && d.temporaryPublic.url) {
-    el.textContent = d.temporaryPublic.url + '  (' + (d.temporaryPublic.label||'temporary') + ')';
+  if (d.deprecatedPublic && d.deprecatedPublic.url) {
+    el.textContent = d.deprecatedPublic.url + '  (deprecated)';
   }
 }).catch(()=>{});
 </script>
