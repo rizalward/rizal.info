@@ -132,6 +132,26 @@
       "title" : "RBOTBRIDGE · in-app bot bridge skill (ЯBOT + ЯBOWZR)",
       "url" : "eggs/rbotbridge-1.0.0.rzl.zip",
       "version" : "1.0.0"
+    },
+    {
+      "ed25519" : "78SaOtU3xnyRHr0vo7lgX0EpZ8nv+UDGCFEVfgIZcCwm8OMb1ze2kkG/nzbl7GrDR85iApgqptpnSm1qY0mSCQ==",
+      "hosts" : [
+        "rbowzr",
+        "ybot"
+      ],
+      "id" : "rid-roster",
+      "kind" : "egg",
+      "minHostVersion" : "0.3.5",
+      "name" : "rid-roster-1.0.0.rzl.zip",
+      "platforms" : [
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "87c88c289bbc5c3056102032d20ab55b756479cbc70db642f61ebcd66faa2a24",
+      "size" : 2568,
+      "title" : "Verified ЯID roster · 11 seats · Chats list stock (ЯID locked) · iOS/iPadOS",
+      "url" : "eggs/rid-roster-1.0.0.rzl.zip",
+      "version" : "1.0.0"
     }
   ],
   "feed" : "https://rizal.info/ybot/appcast.json",
