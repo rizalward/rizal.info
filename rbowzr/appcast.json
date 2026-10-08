@@ -1,16 +1,16 @@
 {
   "app" : {
-    "ed25519" : "RCOCeoeGbAbJD7ByMsDKiyiczugAkWTvzQyIRsfow1j09YAwns4yT3p947MvLey4QO8JlRSE44EtRNAhrKMhDA==",
+    "ed25519" : "7w14jLBVgC3H+ENXV38VhECLf79JWOm8Y0JeoXMKCAdu2976JILvzTqm4sNQzhvBQ+LPAGLHlG7IaUk33NPzBg==",
     "id" : "info.rizal.rbowzr.native",
     "kind" : "app",
     "minimumSystemVersion" : "14.0",
-    "name" : "RBOWZR-1.2.3.dmg",
-    "notes" : "ЯBOWZR 1.2.3 (10) · fresh wallet · relay client · heart fused in · ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
-    "sha256" : "6409fef26601adc5fc79d46cfb079b1e43af095b9d38d74f2126fc7282a28422",
-    "size" : 626954077,
+    "name" : "RBOWZR-1.2.8-mac.dmg",
+    "notes" : "ЯBOWZR 1.2.8 (17) · the same super update as iOS: list landing page · ЯID Botbridge calls/alarms/nubs/links · yabowzr://klassroom · .rbotpack · Chief profile editor · pairing to the local bridge · identity guard · installs only to ~/ЯLAB/APPS (one app · one tile)",
+    "sha256" : "45ddbdefdd4c12399b976b9dc253d08f415e88268e6d7459f9e9f7f326e82a64",
+    "size" : 630052860,
     "title" : "ЯBOWZR",
-    "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.3/RBOWZR-1.2.3.dmg",
-    "version" : "1.2.3"
+    "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.8/RBOWZR-1.2.8-mac.dmg",
+    "version" : "1.2.8"
   },
   "apps" : {
     "android" : {
@@ -26,8 +26,8 @@
       "version" : "0.1.3"
     },
     "ios" : {
-      "build" : "14",
-      "ed25519" : "9fBakylsVI56DfhqOaT2q9JHH76Y/VJq5QGRT3KUMdkswi6eY8K1hoAv0yhHdvztOraVecKUjCSNuVqdXuV/CQ==",
+      "build" : "17",
+      "ed25519" : "h9YEAlEWlxGEfQ+93SNd3ltRb32cclZazy7UY66aoNCzK6V7uWtX1vOH1HcxLfacW5OQdEh9UeRqdxEJL/26BQ==",
       "heart" : {
         "bytes" : 639446688,
         "id" : "qwen3-0.6b-q8",
@@ -36,19 +36,19 @@
       },
       "id" : "info.rizal.rbowzr.native",
       "kind" : "app",
-      "name" : "RBOWZR-1.2.6-ios.ipa",
-      "notes" : "ios 1.2.6 (14) · development-signed IPA (registered devices) · Heart GGUF fusion fix: fused heart in the signed bundle is authoritative (GGUF magic + manifest size required) · local runtime check names the exact failing step (no more endless 'warming'); type 'heart check' · REQ-20 heart fused + build-guarded · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "name" : "RBOWZR-1.2.8-ios.ipa",
+      "notes" : "ios 1.2.8 (17) · development-signed IPA (registered devices) · list landing page (conversation-first) · ЯID Botbridge: calls, alarms, nubs and links (yabowzr://botbridge, yabowzr://klassroom) · .rbotpack transfer · Chief profile editor (tap your avatar; square crop; this install's own owner) · identity line + reply guard (a reply can't claim another ЯID) · roster arrives only at runtime from a paired bridge — no roster data in the IPA · REQ-20 heart fused + build-guarded",
       "platform" : "ios",
       "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
-      "sha256" : "379dcb2e7e4b4274b37ff9749460bd8e4ace0f63675b5c9cec42f12c6db7b3d0",
-      "size" : 636803942,
+      "sha256" : "569c9137ee4a5f574788a2f68a946bff1975638717b0e762fc981d13ed0070cd",
+      "size" : 639888545,
       "store" : "",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.6/RBOWZR-1.2.6-ios.ipa",
-      "version" : "1.2.6"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.8/RBOWZR-1.2.8-ios.ipa",
+      "version" : "1.2.8"
     },
     "ipados" : {
-      "build" : "14",
-      "ed25519" : "9fBakylsVI56DfhqOaT2q9JHH76Y/VJq5QGRT3KUMdkswi6eY8K1hoAv0yhHdvztOraVecKUjCSNuVqdXuV/CQ==",
+      "build" : "17",
+      "ed25519" : "h9YEAlEWlxGEfQ+93SNd3ltRb32cclZazy7UY66aoNCzK6V7uWtX1vOH1HcxLfacW5OQdEh9UeRqdxEJL/26BQ==",
       "heart" : {
         "bytes" : 639446688,
         "id" : "qwen3-0.6b-q8",
@@ -57,28 +57,28 @@
       },
       "id" : "info.rizal.rbowzr.native",
       "kind" : "app",
-      "name" : "RBOWZR-1.2.6-ios.ipa",
-      "notes" : "ipados 1.2.6 (14) · development-signed IPA (registered devices) · Heart GGUF fusion fix: fused heart in the signed bundle is authoritative (GGUF magic + manifest size required) · local runtime check names the exact failing step (no more endless 'warming'); type 'heart check' · REQ-20 heart fused + build-guarded · bundled read-only KLASSROOM (REQ-21 + lessons) · botbridge tile · Face ID approve · updates via appcast + home-network token-gated route, never USB",
+      "name" : "RBOWZR-1.2.8-ios.ipa",
+      "notes" : "ipados 1.2.8 (17) · development-signed IPA (registered devices) · list landing page (conversation-first) · ЯID Botbridge: calls, alarms, nubs and links (yabowzr://botbridge, yabowzr://klassroom) · .rbotpack transfer · Chief profile editor (tap your avatar; square crop; this install's own owner) · identity line + reply guard (a reply can't claim another ЯID) · roster arrives only at runtime from a paired bridge — no roster data in the IPA · REQ-20 heart fused + build-guarded",
       "platform" : "ipados",
       "route" : "signed appcast + home-network-only token-gated iPhone→Mac tile route (never USB)",
-      "sha256" : "379dcb2e7e4b4274b37ff9749460bd8e4ace0f63675b5c9cec42f12c6db7b3d0",
-      "size" : 636803942,
+      "sha256" : "569c9137ee4a5f574788a2f68a946bff1975638717b0e762fc981d13ed0070cd",
+      "size" : 639888545,
       "store" : "",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.6/RBOWZR-1.2.6-ios.ipa",
-      "version" : "1.2.6"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.8/RBOWZR-1.2.8-ios.ipa",
+      "version" : "1.2.8"
     },
     "macos" : {
-      "ed25519" : "RCOCeoeGbAbJD7ByMsDKiyiczugAkWTvzQyIRsfow1j09YAwns4yT3p947MvLey4QO8JlRSE44EtRNAhrKMhDA==",
+      "ed25519" : "7w14jLBVgC3H+ENXV38VhECLf79JWOm8Y0JeoXMKCAdu2976JILvzTqm4sNQzhvBQ+LPAGLHlG7IaUk33NPzBg==",
       "id" : "info.rizal.rbowzr.native",
       "kind" : "app",
       "minimumSystemVersion" : "14.0",
-      "name" : "RBOWZR-1.2.3.dmg",
-      "notes" : "ЯBOWZR 1.2.3 (10) · fresh wallet · relay client · heart fused in · ЯOS one shell · one tile · signed updater (/update) · egg updater (/eggs install) · bots panel profile editor",
-      "sha256" : "6409fef26601adc5fc79d46cfb079b1e43af095b9d38d74f2126fc7282a28422",
-      "size" : 626954077,
+      "name" : "RBOWZR-1.2.8-mac.dmg",
+      "notes" : "ЯBOWZR 1.2.8 (17) · the same super update as iOS: list landing page · ЯID Botbridge calls/alarms/nubs/links · yabowzr://klassroom · .rbotpack · Chief profile editor · pairing to the local bridge · identity guard · installs only to ~/ЯLAB/APPS (one app · one tile)",
+      "sha256" : "45ddbdefdd4c12399b976b9dc253d08f415e88268e6d7459f9e9f7f326e82a64",
+      "size" : 630052860,
       "title" : "ЯBOWZR",
-      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.3/RBOWZR-1.2.3.dmg",
-      "version" : "1.2.3"
+      "url" : "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.8/RBOWZR-1.2.8-mac.dmg",
+      "version" : "1.2.8"
     }
   },
   "eggs" : [
@@ -145,7 +145,7 @@
     }
   ],
   "feed" : "https://rizal.info/rbowzr/appcast.json",
-  "generated" : "2026-10-08T00:13:56Z",
+  "generated" : "2026-10-08T03:39:38Z",
   "keyId" : "e5833fdfbbfe",
   "product" : "ЯBOWZR",
   "schema" : "rlab-appcast.v1",
