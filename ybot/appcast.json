@@ -71,25 +71,23 @@
   },
   "eggs" : [
     {
-      "ed25519" : "LenDrQ5GAFP34vp2caNjBi1agSpHvzZoQxuiTGxWjU88I3OcemTayTp2/KUcmXGA6iDTgCGnq/Np0ct6kpJkBw==",
+      "ed25519" : "VeyQ0jleSqyzy6N2T4MMot57Ylein8amsWdJE7svnUvBzKrIpDMKTk3040HnSzbzqgOTP/8fOX5S1cVMJIneBw==",
       "hosts" : [
-        "rbowzr",
         "ybot"
       ],
       "id" : "bots-panel",
       "kind" : "egg",
       "minHostVersion" : "0.3.5",
-      "name" : "bots-panel-1.1.1.rzl.zip",
+      "name" : "bots-panel-1.1.9.rzl.zip",
       "platforms" : [
-        "macos",
         "ios",
         "ipados"
       ],
-      "sha256" : "70e36d4b8f9b539d6a6cef04dfba67e04199bfc07874b13e6b9e0aa2db8c5475",
-      "size" : 153400,
-      "title" : "ЯBOWZR BOTS PANEL · stock ЯBOT + your bots · profile editor",
-      "url" : "eggs/bots-panel-1.1.1.rzl.zip",
-      "version" : "1.1.1"
+      "sha256" : "c9b4df26445ffe06e45a90a3fbd2f552db9df7df12b23a3c0962e243df48e8be",
+      "size" : 204813,
+      "title" : "ЯBOWZR BOTS PANEL 1.1.9 · Chats list + skills autoload · iOS/iPadOS",
+      "url" : "eggs/bots-panel-1.1.9.rzl.zip",
+      "version" : "1.1.9"
     },
     {
       "ed25519" : "Vpb5VCBlXzeuPOg+Oy/8WicrBIKgVvWORlKk78jd4Bq4VbVQk70LES9BpduApcZlyLhtBLSNiTtoJmOz4ivNCQ==",
