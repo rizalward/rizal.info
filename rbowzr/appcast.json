@@ -161,6 +161,27 @@
       "title" : "Offline heart · iOS ЯBOWZR chat answers from the on-device Heart (airplane-mode safe)",
       "url" : "eggs/offline-heart-1.0.0.rzl.zip",
       "version" : "1.0.0"
+    },
+    {
+      "ed25519" : "uQsxzi4SlbX8h/v+JxeDolzMNP9Gd4fSPrITaGaWXArL8nNppGLdUnd5swKlZ+9svnDnNPRoPZgbSmghCTZ3BQ==",
+      "hosts" : [
+        "rbowzr",
+        "ybot"
+      ],
+      "id" : "rbotbridge",
+      "kind" : "egg",
+      "minHostVersion" : "1.1.2",
+      "name" : "rbotbridge-1.0.0.rzl.zip",
+      "platforms" : [
+        "macos",
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "11eb47e9074da39340664e7f573d1e1e13a1ffe983d5e48b2c97b41e43205d16",
+      "size" : 5415,
+      "title" : "RBOTBRIDGE · in-app bot bridge skill (ЯBOT + ЯBOWZR)",
+      "url" : "eggs/rbotbridge-1.0.0.rzl.zip",
+      "version" : "1.0.0"
     }
   ],
   "feed" : "https://rizal.info/rbowzr/appcast.json",
