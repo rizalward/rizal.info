@@ -138,11 +138,11 @@
       "status": "coming soon",
       "statusNote": "iOS/iPadOS IPA not published yet. Mac DMG published as 1.2.2 build 9 (sha256 f8263bb9981d5f286189819fe743e55106714dd73af0aaf272e5c83a2f5effe4). Phone lab build 1.2.2 (9) via USB / Wi-Fi.",
       "macPublished": {
-        "version": "1.2.2",
-        "name": "RBOWZR-1.2.2.dmg",
-        "sha256": "f8263bb9981d5f286189819fe743e55106714dd73af0aaf272e5c83a2f5effe4",
-        "size": 626877777,
-        "url": "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.2/RBOWZR-1.2.2.dmg"
+        "version": "1.2.8",
+        "url": "https://github.com/rizalward/rizal.info/releases/download/rbowzr-v1.2.8/RBOWZR-1.2.8-mac.dmg",
+        "name": "RBOWZR-1.2.8-mac.dmg",
+        "size": 630052860,
+        "sha256": "45ddbdefdd4c12399b976b9dc253d08f415e88268e6d7459f9e9f7f326e82a64"
       },
       "icon": "icons/rbowzr.png",
       "notes": ".rzl browser shell · exact ID · one tile · App Group group.info.rizal.rlab",
