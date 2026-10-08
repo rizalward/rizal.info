@@ -142,6 +142,25 @@
       "title" : "UNIFIED SMART COMMAND SEARCH ADDRESS MANUAL BAR (public catalog)",
       "url" : "eggs/unified-bar-1.1.1.rzl.zip",
       "version" : "1.1.1"
+    },
+    {
+      "ed25519" : "HOwmTTz33x3C8OV8TB6DgOmM6/DPNt6GIjFeQWE1G7rAe2v1D0b2qKTRWfZVTqoWZRGw1YTY9RWr8Kc3XPHFAQ==",
+      "hosts" : [
+        "rbowzr"
+      ],
+      "id" : "offline-heart",
+      "kind" : "egg",
+      "minHostVersion" : "1.2.8",
+      "name" : "offline-heart-1.0.0.rzl.zip",
+      "platforms" : [
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "80abe3b9430a869bf5bb4cae02fc0e374a98c7a518492fb6cc42e5d8bdcc8824",
+      "size" : 20590,
+      "title" : "Offline heart · iOS ЯBOWZR chat answers from the on-device Heart (airplane-mode safe)",
+      "url" : "eggs/offline-heart-1.0.0.rzl.zip",
+      "version" : "1.0.0"
     }
   ],
   "feed" : "https://rizal.info/rbowzr/appcast.json",
