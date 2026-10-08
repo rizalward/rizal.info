@@ -144,25 +144,6 @@
       "version" : "1.1.1"
     },
     {
-      "ed25519" : "HOwmTTz33x3C8OV8TB6DgOmM6/DPNt6GIjFeQWE1G7rAe2v1D0b2qKTRWfZVTqoWZRGw1YTY9RWr8Kc3XPHFAQ==",
-      "hosts" : [
-        "rbowzr"
-      ],
-      "id" : "offline-heart",
-      "kind" : "egg",
-      "minHostVersion" : "1.2.8",
-      "name" : "offline-heart-1.0.0.rzl.zip",
-      "platforms" : [
-        "ios",
-        "ipados"
-      ],
-      "sha256" : "80abe3b9430a869bf5bb4cae02fc0e374a98c7a518492fb6cc42e5d8bdcc8824",
-      "size" : 20590,
-      "title" : "Offline heart · iOS ЯBOWZR chat answers from the on-device Heart (airplane-mode safe)",
-      "url" : "eggs/offline-heart-1.0.0.rzl.zip",
-      "version" : "1.0.0"
-    },
-    {
       "ed25519" : "uQsxzi4SlbX8h/v+JxeDolzMNP9Gd4fSPrITaGaWXArL8nNppGLdUnd5swKlZ+9svnDnNPRoPZgbSmghCTZ3BQ==",
       "hosts" : [
         "rbowzr",
@@ -182,6 +163,25 @@
       "title" : "RBOTBRIDGE · in-app bot bridge skill (ЯBOT + ЯBOWZR)",
       "url" : "eggs/rbotbridge-1.0.0.rzl.zip",
       "version" : "1.0.0"
+    },
+    {
+      "ed25519" : "tqeRsa96xxdFdtR4WO77LdluJrMOwhBzDnDYIHEeIom2RXGvaHh2skSpdaMFJBdwOvRTclbtpHwhuqXDSjbEDQ==",
+      "hosts" : [
+        "rbowzr"
+      ],
+      "id" : "offline-heart",
+      "kind" : "egg",
+      "minHostVersion" : "1.2.8",
+      "name" : "offline-heart-1.1.0.rzl.zip",
+      "platforms" : [
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "cab78bfe05fdff7d2781367ff33e413dbcb09adb423cb8d45bf630cbf67500f4",
+      "size" : 24968,
+      "title" : "Offline heart 1.1.0 · iOS ЯBOWZR on-device Heart + NEO MANUAL digest (neo) · airplane-mode safe",
+      "url" : "eggs/offline-heart-1.1.0.rzl.zip",
+      "version" : "1.1.0"
     }
   ],
   "feed" : "https://rizal.info/rbowzr/appcast.json",
