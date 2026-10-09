@@ -204,10 +204,8 @@
       "tab": "apps",
       "version": "0.1.3",
       "build": null,
-      "downloadURL": "https://rizal.info/rbowzr/android/releases/0.1.3/%D0%AFBOWZR-Android-0.1.3-debug.apk",
-      "sha256": "2875acd156fbb599406259dd03a4c2c291ee323997e209862c0c95d151e7c3ca",
-      "size": 13013790,
-      "status": "published",
+      "downloadURL": "https://rizal.info/rbowzr/android/",
+      "status": "withdrawn",
       "icon": "icons/rbowzr.png",
       "notes": "Native Android host · debug APK · update feed /rbowzr/android/updates/",
       "pricing": {
@@ -217,7 +215,8 @@
         "payTo": null,
         "cta": "Get",
         "tipCta": "SEND IT"
-      }
+      },
+      "note": "Android 0.1.3 debug build withdrawn from public (carried private data). A scrubbed Android release needs a rebuild (held)."
     },
     {
       "id": "rbowzr-linux",
@@ -341,8 +340,8 @@
         "skill": "https://rizal.info/skills/grok-bridge.skill",
         "catalog": "https://rizal.info/skills/connectors.json"
       },
-      "sha256": "e226cc3e720f376d6b0dae64f673f642e4f4cbb50b30502aefa894b4fc4d5eea",
-      "size": 5960,
+      "sha256": "7787e724e0b82d62e54d2cc54fd7b92ef92e29b7d426cf8137a711765985815b",
+      "size": 6250,
       "status": "published",
       "statusNote": "iOS paused. Mac skill+adapter. Permanent catalog /botlatch/bridge. Live on Neo :4872. Token stays on Neo — not in package.",
       "notes": "Official Super Grok connector skill for RBOT (ЯBOT) + RBWR (ЯBOWZR). Verbs: ping · handoff · recall · stealth · status. Plate 80.",
@@ -477,8 +476,8 @@
         "zip": "https://rizal.info/skills/grok-bridge.zip",
         "skill": "https://rizal.info/skills/grok-bridge.skill"
       },
-      "sha256": "e226cc3e720f376d6b0dae64f673f642e4f4cbb50b30502aefa894b4fc4d5eea",
-      "size": 5960,
+      "sha256": "7787e724e0b82d62e54d2cc54fd7b92ef92e29b7d426cf8137a711765985815b",
+      "size": 6250,
       "ios": "paused",
       "notes": "Official Super Grok connector skill. Verbs: ping · handoff · recall · stealth · status. Plate 80. Token stays on Neo. Permanent catalog: https://rizal.info/botlatch/bridge/"
     },
@@ -526,7 +525,7 @@
       "ios": "paused",
       "endpoint": "https://rizal.info/botlatch/bridge/",
       "liveLocal": "http://127.0.0.1:4872",
-      "temporaryPublic": "https://grad-journal-paper-mls.trycloudflare.com"
+      "temporaryPublic": "retired tunnel (private)"
     },
     {
       "id": "supergrok",

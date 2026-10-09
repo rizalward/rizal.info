@@ -1,114 +1,114 @@
 {
-  "schema": "rlab.skills-connectors.v1",
-  "name": "Skills and Connectors",
-  "storefront": "Я POTLATCH · Skills and Connectors",
-  "updated": "2026-10-07T00:30:00-0600",
-  "note": "Live endpoint: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net (bearer auth). Permanent catalog rizal.info/botlatch/bridge. trycloudflare deprecated (backup); RDNS bridge.rizal.info:8443 backup blocked upstream (router forward saved, ISP box double NAT blocks inbound). iOS paused. No tokens in packages.",
-  "skills": [
+ "schema": "rlab.skills-connectors.v1",
+ "name": "Skills and Connectors",
+ "storefront": "Я POTLATCH · Skills and Connectors",
+ "updated": "2026-10-07T00:30:00-0600",
+ "note": "Live endpoint: Tailscale Funnel private endpoint (Decider devices only) (bearer auth). Permanent catalog rizal.info/botlatch/bridge. trycloudflare deprecated (backup); RDNS backup host (private) backup blocked upstream (router forward saved, ISP box double NAT blocks inbound). iOS paused. No tokens in packages.",
+ "skills": [
+  {
+   "id": "grok-bridge",
+   "name": "grok.bridge",
+   "kind": "skill+adapter",
+   "version": "0.1.0",
+   "status": "published",
+   "downloadURL": "https://rizal.info/skills/grok-bridge.zip",
+   "downloadURLs": {
+    "zip": "https://rizal.info/skills/grok-bridge.zip",
+    "skill": "https://rizal.info/skills/grok-bridge.skill"
+   },
+   "sha256": "7787e724e0b82d62e54d2cc54fd7b92ef92e29b7d426cf8137a711765985815b",
+   "size": 6250,
+   "ios": "paused",
+   "notes": "Official Super Grok connector skill. Verbs: ping · handoff · recall · stealth · status. Plate 80. Token stays on Neo. Permanent catalog: https://rizal.info/botlatch/bridge/ · public edition: live endpoint is private (Decider devices only)."
+  },
+  {
+   "id": "supergrok-bridge",
+   "name": "SUPERGROK-BRIDGE",
+   "kind": "skill",
+   "status": "published",
+   "notes": "Workshop skill for Super Grok talking to ЯBOT / ЯBOWZR via the bridge (app_say, transcripts, botbridge). Companion to grok.bridge.",
+   "pairsWith": "grok-bridge"
+  }
+ ],
+ "connectors": [
+  {
+   "id": "grok.bridge",
+   "name": "Grok Bridge",
+   "kind": "bridge",
+   "status": "Live",
+   "skill": "grok-bridge",
+   "endpointNote": "Live: Tailscale Funnel private endpoint (Decider devices only) -> Neo 127.0.0.1:4872, Bearer auth (401 without). Catalog https://rizal.info/botlatch/bridge/. Backups: RDNS backup host (private) (router forward saved, blocked upstream by ISP box double NAT), trycloudflare (deprecated).",
+   "conversation": {
+    "tools": [
+     "app_say",
+     "app_status",
+     "transcript_read",
+     "botbridge_status",
+     "botbridge_join",
+     "bridge_ping",
+     "bridge_handoff",
+     "bridge_recall",
+     "bridge_stealth",
+     "bridge_status"
+    ],
+    "lanes": {
+     "RBOT": "yabot",
+     "RBWR": "yabowzr"
+    },
+    "plate": 80
+   },
+   "connected": [
+    "supergrok",
+    "yabot",
+    "yabowzr"
+   ],
+   "ios": "paused",
+   "endpoint": "private endpoint (Decider devices only)",
+   "endpointPaths": "private endpoint (Decider devices only)",
+   "catalog": "https://rizal.info/botlatch/bridge/",
+   "liveLocal": "http://127.0.0.1:4872",
+   "deprecatedPublic": "retired tunnel (private)",
+   "deprecatedPublicNote": "trycloudflare quick tunnel — deprecated, backup only; changes on restart.",
+   "backups": [
     {
-      "id": "grok-bridge",
-      "name": "grok.bridge",
-      "kind": "skill+adapter",
-      "version": "0.1.0",
-      "status": "published",
-      "downloadURL": "https://rizal.info/skills/grok-bridge.zip",
-      "downloadURLs": {
-        "zip": "https://rizal.info/skills/grok-bridge.zip",
-        "skill": "https://rizal.info/skills/grok-bridge.skill"
-      },
-      "sha256": "529cb24aa87420af34385d610651465d037c911a33a7e601c82b906be5316c1e",
-      "size": 6342,
-      "ios": "paused",
-      "notes": "Official Super Grok connector skill. Verbs: ping · handoff · recall · stealth · status. Plate 80. Token stays on Neo. Permanent catalog: https://rizal.info/botlatch/bridge/"
+     "url": "backup endpoint (private)",
+     "kind": "rtailscale + RDNS (backup host (private) A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
+     "status": "backup — blocked upstream: router forward 8443 saved, ISP box (double NAT) blocks inbound"
     },
     {
-      "id": "supergrok-bridge",
-      "name": "SUPERGROK-BRIDGE",
-      "kind": "skill",
-      "status": "published",
-      "notes": "Workshop skill for Super Grok talking to ЯBOT / ЯBOWZR via the bridge (app_say, transcripts, botbridge). Companion to grok.bridge.",
-      "pairsWith": "grok-bridge"
+     "url": "retired tunnel (private)",
+     "kind": "trycloudflare quick tunnel",
+     "status": "deprecated — backup only; URL changes if the tunnel restarts"
     }
-  ],
-  "connectors": [
-    {
-      "id": "grok.bridge",
-      "name": "Grok Bridge",
-      "kind": "bridge",
-      "status": "Live",
-      "skill": "grok-bridge",
-      "endpointNote": "Live: Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net -> Neo 127.0.0.1:4872, Bearer auth (401 without). Catalog https://rizal.info/botlatch/bridge/. Backups: RDNS bridge.rizal.info:8443 (router forward saved, blocked upstream by ISP box double NAT), trycloudflare (deprecated).",
-      "conversation": {
-        "tools": [
-          "app_say",
-          "app_status",
-          "transcript_read",
-          "botbridge_status",
-          "botbridge_join",
-          "bridge_ping",
-          "bridge_handoff",
-          "bridge_recall",
-          "bridge_stealth",
-          "bridge_status"
-        ],
-        "lanes": {
-          "RBOT": "yabot",
-          "RBWR": "yabowzr"
-        },
-        "plate": 80
-      },
-      "connected": [
-        "supergrok",
-        "yabot",
-        "yabowzr"
-      ],
-      "ios": "paused",
-      "endpoint": "https://rizals-macbook-neo.taile78ba8.ts.net",
-      "endpointPaths": "https://rizals-macbook-neo.taile78ba8.ts.net/v1/grok-bridge/{ping|handoff|recall|stealth|status}",
-      "catalog": "https://rizal.info/botlatch/bridge/",
-      "liveLocal": "http://127.0.0.1:4872",
-      "deprecatedPublic": "https://grad-journal-paper-mls.trycloudflare.com",
-      "deprecatedPublicNote": "trycloudflare quick tunnel — deprecated, backup only; changes on restart.",
-      "backups": [
-        {
-          "url": "https://bridge.rizal.info:8443",
-          "kind": "rtailscale + RDNS (bridge.rizal.info A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
-          "status": "backup — blocked upstream: router forward 8443 saved, ISP box (double NAT) blocks inbound"
-        },
-        {
-          "url": "https://grad-journal-paper-mls.trycloudflare.com",
-          "kind": "trycloudflare quick tunnel",
-          "status": "deprecated — backup only; URL changes if the tunnel restarts"
-        }
-      ]
-    },
-    {
-      "id": "supergrok",
-      "name": "Super Grok",
-      "kind": "skill+connector",
-      "status": "connected",
-      "via": "grok.bridge",
-      "notes": "Workshop lane caller. Uses app_say / bot lanes through the Live bridge."
-    },
-    {
-      "id": "yabot",
-      "name": "ЯBOT",
-      "kind": "app",
-      "status": "connected",
-      "via": "grok.bridge",
-      "mouth": "yabot",
-      "lane": "RBOT",
-      "notes": "Conversation via app_say on the RBOT workshop lane."
-    },
-    {
-      "id": "yabowzr",
-      "name": "ЯBOWZR",
-      "kind": "app",
-      "status": "connected",
-      "via": "grok.bridge",
-      "mouth": "yabowzr",
-      "lane": "RBWR",
-      "notes": "Conversation via app_say on the RBWR shell lane. Handoff target for plate 80."
-    }
-  ]
+   ]
+  },
+  {
+   "id": "supergrok",
+   "name": "Super Grok",
+   "kind": "skill+connector",
+   "status": "connected",
+   "via": "grok.bridge",
+   "notes": "Workshop lane caller. Uses app_say / bot lanes through the Live bridge."
+  },
+  {
+   "id": "yabot",
+   "name": "ЯBOT",
+   "kind": "app",
+   "status": "connected",
+   "via": "grok.bridge",
+   "mouth": "yabot",
+   "lane": "RBOT",
+   "notes": "Conversation via app_say on the RBOT workshop lane."
+  },
+  {
+   "id": "yabowzr",
+   "name": "ЯBOWZR",
+   "kind": "app",
+   "status": "connected",
+   "via": "grok.bridge",
+   "mouth": "yabowzr",
+   "lane": "RBWR",
+   "notes": "Conversation via app_say on the RBWR shell lane. Handoff target for plate 80."
+  }
+ ]
 }

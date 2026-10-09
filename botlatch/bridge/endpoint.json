@@ -13,8 +13,8 @@
   ],
   "kind": "catalog",
   "liveEndpoint": {
-    "url": "https://rizals-macbook-neo.taile78ba8.ts.net",
-    "paths": "https://rizals-macbook-neo.taile78ba8.ts.net/v1/grok-bridge/{ping|handoff|recall|stealth|status}",
+    "url": "private endpoint (Decider devices only)",
+    "paths": "private endpoint (Decider devices only)",
     "via": "Tailscale Funnel (persistent, set with --bg; survives reboot) -> Neo 127.0.0.1:4872",
     "auth": "Bearer required; 401 without token",
     "label": "permanent live"
@@ -24,7 +24,7 @@
   "auth": "Bearer token from Neo Keychain (rlab.supergrok-bridge.token). Refuse if missing. Never paste the token.",
   "live": {
     "bind": "127.0.0.1:4872",
-    "host": "rizals-MacBook-Neo",
+    "host": "<your-mac>",
     "paths": {
       "health": "GET /health (no auth)",
       "ping": "POST /v1/grok-bridge/ping",
@@ -34,21 +34,21 @@
       "status": "POST /v1/grok-bridge/status"
     },
     "note": "Public live calls go to the Tailscale Funnel URL (liveEndpoint.url). GitHub Pages (this catalog) is static and cannot proxy.",
-    "publicUrl": "https://rizals-macbook-neo.taile78ba8.ts.net"
+    "publicUrl": "private endpoint (Decider devices only)"
   },
   "deprecatedPublic": {
-    "url": "https://grad-journal-paper-mls.trycloudflare.com",
+    "url": "retired tunnel (private)",
     "label": "deprecated",
     "note": "trycloudflare quick tunnel. Deprecated, kept as backup only; changes if the tunnel restarts."
   },
   "backups": [
     {
-      "url": "https://bridge.rizal.info:8443",
-      "kind": "rtailscale + RDNS (bridge.rizal.info A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
+      "url": "backup endpoint (private)",
+      "kind": "rtailscale + RDNS (backup host (private) A record via Unstoppable Domains, launchd info.rizal.rdns-update every 10 min)",
       "status": "backup — blocked upstream: router forward 8443 saved, ISP box (double NAT) blocks inbound"
     },
     {
-      "url": "https://grad-journal-paper-mls.trycloudflare.com",
+      "url": "retired tunnel (private)",
       "kind": "trycloudflare quick tunnel",
       "status": "deprecated — backup only; URL changes if the tunnel restarts"
     }
@@ -58,8 +58,8 @@
     "cloudflareAccount": "none (Decider has no Cloudflare account)",
     "namedTunnel": "aborted",
     "reverseProxyOnPages": "impossible (static only)",
-    "livePublicHttps": "Tailscale Funnel https://rizals-macbook-neo.taile78ba8.ts.net",
-    "rdnsBackup": "bridge.rizal.info:8443 via rtailscale + RDNS — router forward saved, blocked upstream by ISP box (double NAT)"
+    "livePublicHttps": "Tailscale Funnel private endpoint (Decider devices only)",
+    "rdnsBackup": "backup host (private) via rtailscale + RDNS — router forward saved, blocked upstream by ISP box (double NAT)"
   },
   "seats": {
     "RBOT": {
@@ -75,7 +75,7 @@
   "ios": "paused",
   "proof": {
     "date": "2026-10-07",
-    "via": "https://rizals-macbook-neo.taile78ba8.ts.net",
+    "via": "private endpoint (Decider devices only)",
     "unauth": "POST /ping without token -> 401 unauthorized",
     "ping": "200 pong, relay ok, mode Live",
     "handoff": "200 plate 80 RBOT->RBWR; RBWR heart=real",
