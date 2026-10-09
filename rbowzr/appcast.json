@@ -13,18 +13,6 @@
     "version" : "1.2.8"
   },
   "apps" : {
-    "android" : {
-      "id" : "local.rizal.yabowzr",
-      "kind" : "app",
-      "name" : "ЯBOWZR-Android-0.1.3-debug.apk",
-      "notes" : "native Android host · gold dragon egg · remote shell/egg update feed",
-      "platform" : "android",
-      "sha256" : "2875acd156fbb599406259dd03a4c2c291ee323997e209862c0c95d151e7c3ca",
-      "size" : 13013790,
-      "updateFeed" : "https://rizal.info/rbowzr/android/updates/index.json",
-      "url" : "https://rizal.info/rbowzr/android/releases/0.1.3/%D0%AFBOWZR-Android-0.1.3-debug.apk",
-      "version" : "0.1.3"
-    },
     "ios" : {
       "build" : "17",
       "ed25519" : "h9YEAlEWlxGEfQ+93SNd3ltRb32cclZazy7UY66aoNCzK6V7uWtX1vOH1HcxLfacW5OQdEh9UeRqdxEJL/26BQ==",

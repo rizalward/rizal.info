@@ -1,21 +1,6 @@
-# ЯBOWZR Android offshoot
+# ЯBOWZR Android — public note
 
-This is the Android face of the same CHANNEL Я shell. The APK is the stable
-native host; the packaged gold egg is the offline fallback.
+The Android 0.1.3 debug build and its packaged egg were **withdrawn** from the public site on 2026-10-08 (they carried private data).
+A scrubbed Android release needs a rebuild and is on hold. No Android download is offered here right now.
 
-## Remote update boundary
-
-The Android host checks the live feed at:
-
-`https://rizal.info/rbowzr/android/updates/index.json`
-
-Future shell assets, `.RZL` eggs, and revealed tiles can be published there
-without rebuilding the APK. A new APK is required only when native host code,
-permissions, or Android intent registration changes.
-
-The current transport egg remains the same cross-device package:
-
-`CHANNEL-YA-SUPER-DYNAMIC-PYGMY.rzl`
-
-It retains the embedded gold-dragon-egg identity and platform adapters for
-Android, iOS, iPadOS, Linux, and macOS.
+Update feed (empty until a scrubbed release ships): `/rbowzr/android/updates/index.json`
