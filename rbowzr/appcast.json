@@ -190,6 +190,27 @@
       "title" : "ЯID roster (public) · zero seats · one bot slot, ЯID minted on first run",
       "url" : "eggs/rid-roster-1.0.1.rzl.zip",
       "version" : "1.0.1"
+    },
+    {
+      "ed25519" : "U7IxdS3D1c1KdaeO6mdLLZKOBANniMta4z8uQvsaUlmc6FL9tsFqwaqb3NzIGTCYW7tbZE0jpbZeOxOVqR5kCg==",
+      "hosts" : [
+        "rbowzr",
+        "ybot"
+      ],
+      "id" : "machine-mind",
+      "kind" : "egg",
+      "minHostVersion" : "1.1.2",
+      "name" : "machine-mind-1.0.0.rzl.zip",
+      "platforms" : [
+        "macos",
+        "ios",
+        "ipados"
+      ],
+      "sha256" : "e0ff22e4c533d09f7ac526fc62b496c31c3e411bac748aef790049e0ffcbf549",
+      "size" : 9100,
+      "title" : "MACHINE-MIND 1.0.0 · base: manual rules + functions, integrated command list + abilities, local-only transcript · VERSION LAW 2026-10-08",
+      "url" : "eggs/machine-mind-1.0.0.rzl.zip",
+      "version" : "1.0.0"
     }
   ],
   "feed" : "https://rizal.info/rbowzr/appcast.json",
