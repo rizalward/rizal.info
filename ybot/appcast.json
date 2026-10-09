@@ -133,7 +133,7 @@
       "version" : "1.0.0"
     },
     {
-      "ed25519" : "78SaOtU3xnyRHr0vo7lgX0EpZ8nv+UDGCFEVfgIZcCwm8OMb1ze2kkG/nzbl7GrDR85iApgqptpnSm1qY0mSCQ==",
+      "ed25519" : "qv5jxhQ9Heg3M4JHUEKvv0ogHKSGPGd/1oHCqAJuWOyVAg+r5g3xhwAsfig+OucX/MQtZfVBAv4/rt6ajXwTAw==",
       "hosts" : [
         "rbowzr",
         "ybot"
@@ -141,16 +141,16 @@
       "id" : "rid-roster",
       "kind" : "egg",
       "minHostVersion" : "0.3.5",
-      "name" : "rid-roster-1.0.0.rzl.zip",
+      "name" : "rid-roster-1.0.1.rzl.zip",
       "platforms" : [
         "ios",
         "ipados"
       ],
-      "sha256" : "87c88c289bbc5c3056102032d20ab55b756479cbc70db642f61ebcd66faa2a24",
-      "size" : 2568,
-      "title" : "Verified ЯID roster · 11 seats · Chats list stock (ЯID locked) · iOS/iPadOS",
-      "url" : "eggs/rid-roster-1.0.0.rzl.zip",
-      "version" : "1.0.0"
+      "sha256" : "307f9e84f274abbfe948ec9409dd17fe41d45f00614de7a157c176e2917066c3",
+      "size" : 1705,
+      "title" : "ЯID roster (public) · zero seats · one bot slot, ЯID minted on first run",
+      "url" : "eggs/rid-roster-1.0.1.rzl.zip",
+      "version" : "1.0.1"
     }
   ],
   "feed" : "https://rizal.info/ybot/appcast.json",
